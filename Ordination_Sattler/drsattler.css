@@ -1,0 +1,676 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+header {
+  position: relative;
+  height: 180px;
+  border: 3px solid linen;
+  overflow: hidden;
+}
+
+header img {
+  position: absolute;
+  filter: blur(2px);
+  transition: 0.4s;
+  object-fit: cover;
+}
+
+header:hover img {
+  filter: unset;
+}
+
+header div.header-content {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 0 0 2vw 2vw;
+  text-shadow: 1px 1px 3px black;
+}
+
+div.header-content h1 {
+  color: white;
+  position: absolute;
+  font-size: 38px;
+  padding-left: 2vw;
+  margin: 0;
+  top: 10px;
+  left: 0px;
+}
+
+div.header-content h2 {
+  color: white;
+  position: absolute;
+  padding-right: 2vw;
+  text-align: right;
+  font-size: 35px;
+  margin: 0;
+  top: 100px;
+  right: 0px;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 180, 45, 0.8);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 56px;
+  z-index: 1;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar a,
+ul.navbar .dropbtn {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgba(255, 180, 45, 1);
+  /*text-shadow: 1px 1px 3px black;*/
+}
+
+ul.navbar li.dropdown {
+  display: none;
+  float: right;
+}
+
+ul.navbar .dropbtn {
+  min-width: 180px;
+  text-align: right;
+}
+
+ul.navbar .dropdown-cont {
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  background-color: linen;
+  min-width: 180px;
+  box-shadow: 0px 0px 3px black;
+  z-index: 1;
+  color: black;
+}
+
+ul.navbar .dropdown-cont a {
+  padding: 14px 3px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+ul.navbar .dropdown:hover .dropdown-cont {
+  display: block;
+}
+
+ul.navbar .dropdown-cont a:hover {
+  background-color: rgba(255, 100, 45, 0.7);
+  /*text-shadow: unset;*/
+}
+
+ul.navbar li.info-link {
+  display: none;
+}
+
+.main {
+  position: relative;
+  height: 720px;
+  border-bottom: 1px solid black;
+  margin-bottom: 100px;
+}
+
+.side-info {
+  position: relative;
+  float: left;
+  width: 35%;
+  height: 100%;
+  background-color: linen;
+  border-right: 5px solid rgba(255, 180, 45, 0.9);
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+p.side-info-cont {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 120%;
+}
+
+#rest-info {
+  position: absolute;
+  bottom: 0px;
+}
+
+#rest-info h3 {
+  font-weight: lighter;
+}
+
+.about {
+  float: right;
+  width: 65%;
+  padding-top: 100px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 35px;
+  height: 100%;
+}
+
+.about p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+.active {
+  background-color: rgba(255, 100, 45, 1);
+}
+
+.kontakt-side-info {
+  float: right;
+  width: 40%;
+  background-color: linen;
+  border-left: 5px solid rgba(255, 180, 45, 0.9);
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  height: 100%;
+}
+
+.map-container {
+  position: relative;
+  width: 60%;
+  float: right;
+  height: 100%;
+}
+
+.map-container #map {
+  position: relative;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  border: 3px solid rgba(255, 180, 45, 0.9);
+  box-shadow: 5px 8px 5px grey;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.leistungen {
+  font-size: 130%;
+}
+
+.kassen-inhalt {
+  width: 100%;
+  height: 580px;
+  background-color: linen;
+  border-top: 3px solid rgba(255, 180, 45, 0.9);
+  border-bottom: 3px solid rgba(255, 180, 45, 0.9);
+}
+
+.kassen-info,
+.vertrag {
+  display: inline-block;
+  width: 50%;
+  padding: 35px;
+  float: left;
+}
+
+.vertrag > ul {
+  list-style-type: none;
+  word-wrap: break-word;
+}
+
+.kassen {
+  font-size: 130%;
+}
+
+.lists {
+  padding-top: 35px;
+  padding-left: 25px;
+  display: inline-block;
+  width: 100%;
+  height: 600px;
+  background-color: linen;
+  border-top: 3px solid rgba(255, 180, 45, 0.9);
+  border-bottom: 3px solid rgba(255, 180, 45, 0.9);
+}
+
+.lists > ul {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.lists > ul > li {
+  padding-bottom: 6px;
+}
+
+.further {
+  padding: 43px 10%;
+  text-align: justify;
+}
+
+.rahmen {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 640px;
+  height: 480px;
+  box-shadow: 3px 3px 5px;
+  border: 3px solid linen;
+  margin: 40px auto;
+}
+
+.pagination {
+  margin: auto;
+}
+
+.pagination .buttons {
+  text-align: center;
+}
+
+.pagination button {
+  background-color: white;
+  width: 35px;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.4s;
+  border: 2px solid rgba(255, 180, 45, 0.9);
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+.pagination button:hover {
+  width: 37px;
+  height: 35px;
+  box-shadow: 4px 4px 8px black;
+}
+
+.pagination button:active {
+  text-shadow: 1px 1px 4px black;
+  color: rgba(255, 180, 45, 0.9);
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  margin-top: 55px;
+  flex-wrap: wrap;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  height: 200px;
+}
+
+.person .img-cont,
+.person .info-cont {
+  padding: 0px 0px 5px 5px;
+}
+
+.img-cont img {
+  border: 4px solid linen;
+}
+
+.info-cont {
+  margin-top: 7px;
+}
+
+.person h3,
+.person p {
+  text-align: left;
+}
+
+.termine {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 110%;
+}
+
+.zeiten {
+  padding-top: 35px;
+  padding-bottom: 125px;
+  width: 50%;
+  background-color: linen;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.zeiten table tr:nth-child(odd) {
+  background-color: rgba(255, 220, 180, 1);
+}
+
+.zeiten table tr:hover td {
+  border-bottom: 2px solid black;
+}
+
+.zeiten table {
+  border-collapse: collapse;
+}
+
+.zeiten table td {
+  font-size: 120%;
+  width: 180px;
+}
+
+.zeiten h2 {
+  width: 360px;
+}
+
+.urlaub {
+  padding-top: 35px;
+  width: auto;
+  background-color: white;
+  height: 100%;
+  padding-left: 25px;
+  overflow-wrap: all;
+  min-height: 400px;
+  padding-right: 15px;
+}
+
+.urlaub p {
+  border: 3px solid rgba(255, 180, 45, 0.9);
+  min-height: 200px;
+  padding: 10px;
+}
+
+.zeiten-pics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  min-width: 200px;
+  height: 100%;
+  background-color: linen;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 250px;
+}
+
+.zeiten-pics img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: 50%;
+  border: 5px solid linen;
+}
+
+.terminvergabe {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(255, 180, 45, 1);
+  min-height: 180px;
+  font-size: 130%;
+  text-align: center;
+  padding: 35px 0px 35px 35px;
+}
+
+.imp-dat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
+
+.impressum {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+/*.imp-dat > section {
+  width: 100%;
+}*/
+
+.headings,
+.c {
+  position: relative;
+  background-color: yellow;
+  width: 100%;
+  height: 500px;
+}
+
+.a,
+.b {
+  position: relative;
+  height: 400px;
+  background-color: white;
+  width: 50%;
+}
+
+.datenschutz {
+  position: relative;
+}
+/*
+.c, .headings {
+  width: 100%;
+  background-color: linen;
+  padding-left: 25px;
+}
+
+.c {
+}*/
+
+/* MOBILE GALLERY */
+@media screen and (max-width: 640px) {
+  .rahmen {
+    width: 98%;
+    height: 70vw;
+    box-shadow: 3px 3px 5px;
+  }
+
+  .leistungen {
+    font-size: 110%;
+  }
+
+  ul.navbar a,
+  ul.navbar .dropbtn {
+    font-size: 15px;
+  }
+
+  ul.navbar {
+    height: 50px;
+  }
+
+  ul.navbar .dropbtn {
+    min-width: 125px;
+    text-align: right;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  p.side-info-cont {
+    font-size: 105%;
+  }
+
+  .person {
+    font-size: 80%;
+  }
+
+  .person h3,
+  .person p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .kassen-info {
+    font-size: 105%;
+  }
+}
+
+/* MOBILE DISPLAY*/
+@media screen and (max-width: 810px) {
+  .zeiten h2,
+  .zeiten table {
+    width: 80%;
+  }
+
+  .person:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .termine {
+    flex-wrap: wrap;
+  }
+
+  .zeiten-pics img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .termine,
+  .terminvergabe {
+    height: auto;
+  }
+
+  .zeiten-pics,
+  .urlaub,
+  .zeiten {
+    width: 100%;
+  }
+
+  .galerie {
+    border-bottom: 3px solid rgba(255, 180, 45, 0.9);
+    padding-bottom: 150px;
+  }
+  .further {
+    text-align: initial;
+  }
+
+  .team {
+    margin-top: 15px;
+  }
+
+  .info-cont {
+    margin-top: 0px;
+  }
+
+  .kassen-inhalt {
+    height: unset;
+  }
+
+  .kassen-info,
+  .vertrag {
+    width: 100%;
+    height: auto;
+    float: unset;
+  }
+
+  .person:nth-child(even) {
+    background-color: linen;
+  }
+
+  .img-cont img {
+    margin: auto;
+  }
+
+  .person:nth-child(even) img {
+    border: 4px solid white;
+  }
+
+  .lists > ul {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main {
+    border: none;
+  }
+
+  .map-container,
+  .kontakt-side-info,
+  .side-info,
+  .about,
+  .lists {
+    height: auto;
+  }
+
+  body {
+    border: none;
+  }
+
+  div.header-content h1 {
+    font-size: 30px;
+  }
+
+  .side-info,
+  .about,
+  .kontakt-side-info,
+  .map-container,
+  .person {
+    width: 100%;
+    padding-top: 35px;
+  }
+
+  .side-info {
+    border-top: 5px solid rgba(255, 180, 45, 0.9);
+    border-right: none;
+    border-bottom: 5px solid rgba(255, 180, 45, 0.9);
+  }
+
+  .kontakt-side-info {
+    border-bottom: 5px solid rgba(255, 180, 45, 0.9);
+    border-left: none;
+  }
+
+  div.header-content h2 {
+    font-size: 27px;
+  }
+
+  ul.navbar li {
+    display: none;
+  }
+
+  ul.navbar li.home-button,
+  ul.navbar li.info-link,
+  ul.navbar li.active {
+    display: initial;
+  }
+
+  ul.navbar li.dropdown {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .lists {
+    padding-top: 0;
+}
