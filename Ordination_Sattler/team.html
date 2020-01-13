@@ -69,9 +69,9 @@
       <li><a href="galerie.html">Galerie</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
       <li class="dropdown">
-        <a class="dropbtn" href="#"
-          >Mehr <i class="fas fa-chevron-circle-down"></i
-        ></a>
+        <button class="dropbtn">
+          Mehr <i class="fas fa-chevron-circle-down"></i>
+        </button>
         <div class="dropdown-cont">
           <a href="termine.html">Termine</a>
           <a href="leistungen.html">Leistungen</a>
@@ -83,7 +83,7 @@
       </li>
     </ul>
 
-    <div class="main">
+    <div id="main" class="main">
       <section id="info" class="team">
         <div class="person">
           <div class="img-cont">
@@ -127,5 +127,31 @@
         </div>
       </section>
     </div>
+
+    <script>
+      var isopen = false;
+      var dropbtn = document.querySelector('.dropbtn');
+      var cont = document.querySelector('.dropdown-cont');
+      var main = document.querySelector('#main');
+      function toggleDD() {
+        if (isopen) {
+          cont.style.transform = 'scaleY(0)';
+          isopen = false;
+        } else {
+          cont.style.transform = 'scaleY(1)';
+          isopen = true;
+        }
+      }
+
+      function closeDD() {
+        if (isopen) {
+          cont.style.transform = 'scaleY(0)';
+          isopen = false;
+        }
+      }
+
+      main.addEventListener('click', closeDD);
+      dropbtn.addEventListener('click', toggleDD);
+    </script>
   </body>
 </html>

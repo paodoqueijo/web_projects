@@ -139,5 +139,31 @@
       </section>
       <div class="further"></div>
     </div>
+
+    <script>
+      var isopen = false;
+      var dropbtn = document.querySelector('.dropbtn');
+      var cont = document.querySelector('.dropdown-cont');
+      var main = document.querySelector('#main');
+      function toggleDD() {
+        if (isopen) {
+          cont.style.transform = 'scaleY(0)';
+          isopen = false;
+        } else {
+          cont.style.transform = 'scaleY(1)';
+          isopen = true;
+        }
+      }
+
+      function closeDD() {
+        if (isopen) {
+          cont.style.transform = 'scaleY(0)';
+          isopen = false;
+        }
+      }
+
+      main.addEventListener('click', closeDD);
+      dropbtn.addEventListener('click', toggleDD);
+    </script>
   </body>
 </html>
