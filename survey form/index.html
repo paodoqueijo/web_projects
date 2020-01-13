@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Internet Consumption Survey</h1>
+        <p id="description">Please fill out the following survey regarding your internet consumption!</p>
+    </header>
+    <main>
+        <form action="" id="survey-form">
+            <label id="name-label" for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name" required>
+            <label id="email-label" for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+            <label for="age">Age:</label>
+            <input id="age"  min="5" max="150" type="number" name="age" placeholder="Enter your Age (optional)">
+            <label id="number-label" for="number">How many hours per day do you spend on the internet? </label>
+            <input id="number" type="number"  min="0" max="24" name="number" placeholder="Enter the amount of hours spent on the internet per day">
+            <label for="dropdown">Which form of internet media do you primarily use?</label>
+            <select id="dropdown" name="dropdown">
+                <option value="Enciclopedias">Web enciclopedias (e.g. Wikipedia)</option>
+                <option value="Social Media">Social media (e.g. Facebook, Instagram)</option>
+                <option value="Streaming">Streaming services (e.g. Netflix)</option>
+                <option value="Video Platforms">Video platforms (e.g. YouTube)</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label style="margin-top: 12px;" for="addiction">How do you feel about the amount of your internet consumption?</label>
+            <span class="radio-element"><input type="radio" name="addiction" value="not-problematic" checked> <span class="addiction-descr">Not problematic </span></span>
+            <span class="radio-element"><input type="radio" name="addiction" value="slightly-problematic"> <span class="addiction-descr">Slightly problematic</span></span>
+            <span class="radio-element"><input type="radio" name="addiction" value="problematic"> <span class="addiction-descr">Problematic</span></span>
+            <span class="radio-element"><input type="radio" name="addiction" value="very-problematic"> <span class="addiction-descr">Very problematic</span></span>
+
+            <label style="margin-top: 7px;" for="media">Which forms of web media are you <em>not</em>&nbsp using on a regular basis?</label>
+            <span class="media">
+                <input type="checkbox" name="media1" value="wiki"><span class="media-descr">Web enciclopedias (e.g. Wikipedia)</span>
+            </span><br>
+            <span class="media">
+                <input type="checkbox" name="media2" value="social"><span class="media-descr">Social media (e.g. Facebook, Instagram)</span>
+            </span><br>
+            <span class="media">
+                <input type="checkbox" name="media3" value="streaming"><span class="media-descr">Streaming services (e.g. Netflix)</span>
+            </span><br>
+            <span class="media">
+                <input type="checkbox" name="media4" value="video-platforms"><span class="media-descr">Video platforms (e.g. YouTube)</span>
+            </span><br>
+            
+            <label style="margin-top: 12px;" for="additional">Any additional information about your internet consumption?</label>
+            <textarea id="additional" rows="8" placeholder="Enter your comments here..."></textarea>
+
+            <label for="submit"></label>
+            <input id="submit"  type="submit" name="submit">
+        </form>
+    </main>
+</body>
+</html>

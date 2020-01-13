@@ -1,0 +1,181 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Didgeridoo24</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b31d65692e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var items_shown = false;
+      function showItems() {
+        var dropdown = document.querySelector('.dropdown');
+        var dd_el = document.querySelectorAll('.dropdown > a');
+        if (items_shown) {
+          dd_el.forEach(element => {
+            element.style.transition = 'all 400ms ease-out 0ms';
+            element.style.opacity = '0';
+          });
+          dropdown.style.height = '0px';
+          items_shown = false;
+        } else {
+          dropdown.style.height = '180px';
+          dd_el.forEach(element => {
+            element.style.transition = 'all 500ms ease 250ms';
+            element.style.opacity = '1';
+            setTimeout(function() {
+              element.style.transition = 'none';
+            }, 750);
+          });
+          items_shown = true;
+        }
+        document.querySelector('body').stlye.backgroundColor = 'linen';
+      }
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="headers">
+        <h1>
+          <img
+            id="header-img"
+            src="/img/Didgeridoo.svg"
+            alt="Didgeridoo Logo"
+          />
+          Didgeridoo24
+        </h1>
+      </div>
+
+      <nav id="nav-bar">
+        <div class="hor-nav">
+          <a class="permanent nav-link" href="#home">
+            <i class="fab fa-atlassian"> </i>
+          </a>
+          <a class="responsive nav-link" href="#about">About</a>
+          <a class="responsive nav-link" href="#angebote">Produkte</a>
+          <a class="responsive nav-link" href="#mehr">Mehr</a>
+          <a class="permanent nav-link" href="#mehr">
+            <i class="fas fa-shopping-cart"> </i>
+          </a>
+          <b onclick="showItems();" class="hamburger">
+            <i class="fas fa-bars"> </i>
+          </b>
+        </div>
+        <div class="dropdown">
+          <a href="#about" class="nav-link">About</a>
+          <br />
+          <a href="#angebote" class="nav-link">Produkte</a>
+          <br />
+          <a href="#mehr" class="nav-link">Mehr</a>
+        </div>
+      </nav>
+    </header>
+
+    <h2 id="home" style="text-align: center;">
+      <i>Das</i> Didgeridoo Fachgeschäft im Netz!
+    </h2>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <label for="email"
+        >Melden Sie sich für den Didgeridoo24 -Newsletter an und bekommen Sie 5%
+        Rabatt auf Ihre erste Bestellung.</label
+      >
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Bitte Email eingeben!"
+      />
+
+      <label for="submit"></label>
+      <input value="Senden" type="submit" id="submit" />
+    </form>
+
+    <section id="about">
+      <h2 style="margin: 25px 0px;">Über unsere Produkte:</h2>
+      <h3><i class="fas fa-leaf"></i> &nbsp Nachhaltigkeit</h3>
+      <p>
+        Für unsere Digeridoos benutzen wir ausschließlich Hölzer aus
+        Österreichischen Wäldern.
+      </p>
+      <h3><i class="fas fa-certificate"></i> &nbsp Höchste Qualität</h3>
+      <p>
+        Wir setzen hohe Standards für die Verarbeitung unserer Produkte und
+        nehmen uns viel Zeit für eine angemessene Qualitätskontrolle.
+      </p>
+      <h3><i class="fas fa-shipping-fast"></i> &nbsp Kurze Lieferzeiten</h3>
+      <p>
+        Durch unsere fantastische Logistikabteilung bekommen Sie Ihr Digeridoo
+        in Windeseile nach Hause geliefert.
+      </p>
+    </section>
+
+    <section id="mehr">
+      <iframe
+        src="https://www.youtube.com/embed/yG9ZX1FS20A"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        width="450"
+        height="270"
+        id="video"
+      ></iframe>
+    </section>
+
+    <h2 id="angebote">Unsere Angebote:</h2>
+    <section id="produkte">
+      <a class="card-link" href="#">
+        <div class="card">
+          <img src="img/dig1.jpg" alt="Digeridoo Modell Wombat" />
+          <h4>Modell Wombat</h4>
+          <p>€ 199</p>
+          <button type="button">
+            In den Warenkorb <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </a>
+      <a class="card-link" href="#">
+        <div class="card">
+          <img src="img/dig2.jpg" alt="Digeridoo Modell Wallaby" />
+          <h4>Modell Wallaby</h4>
+          <p>€ 399</p>
+          <button type="button">
+            In den Warenkorb <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </a>
+      <a class="card-link" href="#">
+        <div class="card">
+          <img src="img/dig3.jpg" alt="Digeridoo Modell Tasmania" />
+          <h4>Modell Tasmania</h4>
+          <p>€ 999</p>
+          <button type="button">
+            In den Warenkorb <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </a>
+    </section>
+
+    <footer>
+      <i class="fas fa-info-circle"></i>
+      <a href="#">Impressum</a>
+      <a href="#">Kontakt</a>
+      <a href="#">Datenschutz</a>
+      <span>&copy Digeridoo24, 2020</span>
+    </footer>
+    <script>
+      var dd_el = document.querySelectorAll('.dropdown > a');
+      dd_el.forEach(element => {
+        element.addEventListener('click', showItems);
+      });
+      document.querySelector('body').stlye.backgroundColor = 'red';
+    </script>
+  </body>
+</html>

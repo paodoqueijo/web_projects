@@ -1,0 +1,29 @@
+$main-font: 'Helvetica Neue';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $main-font, sans-serif;
+}
+
+.about {
+  font-size: 20px;
+  text-align: justify;
+}
+
+footer {
+  position: fixed;
+  left: 10px;
+  bottom: 0px;
+  width: 200px;
+  background-color: fuchsia;
+  font-weight: 900;
+  color: #fff;
+}
+
+@media (max-width:700px) {
+  .about {
+    color:red;
+  }
+}

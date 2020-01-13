@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324.319" height="248.669" viewBox="0 0 324.319 248.669">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 15px;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Didgeridoo" transform="translate(3 3)">
+    <g id="Component_1_1" data-name="Component 1 – 1">
+      <path id="Path_1" data-name="Path 1" class="cls-1" d="M162.3,196.93,412.782,368.3l17.774-23.2L146.02,125.633l-33.784,34.442Z" transform="translate(-112.236 -125.633)"/>
+    </g>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M232.615,245.345c-.4-12.239,9.169-12.538,9.169-12.538s11.491,3.521,11.209-6.4,9.065-10.353,9.065-10.353" transform="translate(-112.236 -126.726)"/>
+    <path id="Path_3" data-name="Path 3" class="cls-2" d="M232.615,244.252c-.387-11.782,8.926-12.07,8.926-12.07s11.186,3.39,10.912-6.165,8.825-9.967,8.825-9.967" transform="translate(-88.236 -108.633)"/>
+    <path id="Path_4" data-name="Path 4" class="cls-2" d="M232.615,244.252c-.387-11.782,8.926-12.07,8.926-12.07s11.186,3.39,10.912-6.165,8.825-9.967,8.825-9.967" transform="translate(-63.236 -89.633)"/>
+    <path id="Path_5" data-name="Path 5" class="cls-2" d="M189.794,197.615V185.991h12.749v-10.6" transform="translate(-112.236 -108.29)"/>
+    <path id="Path_8" data-name="Path 8" class="cls-2" d="M189.794,197.615V185.991h12.749v-10.6" transform="translate(-134.236 -123.29)"/>
+    <path id="Path_6" data-name="Path 6" class="cls-2" d="M189.794,197.615V185.991h12.77v-10.6" transform="translate(-99.49 -123.29)"/>
+    <path id="Path_7" data-name="Path 7" class="cls-2" d="M189.794,197.615V185.991h12.77v-10.6" transform="translate(-121.49 -138.29)"/>
+    <path id="Path_10" data-name="Path 10" class="cls-3" d="M133.9,170.725l7.149-8.261" transform="translate(-109.329 -133.209) rotate(3)"/>
+    <path id="Path_11" data-name="Path 11" class="cls-3" d="M133.9,170.725l7.149-8.261" transform="translate(-85.329 -158.209) rotate(3)"/>
+  </g>
+</svg>

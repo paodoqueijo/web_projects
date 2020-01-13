@@ -1,0 +1,314 @@
+/** @format */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'American Typewriter', serif;
+  margin: 0;
+  background-color: linen;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+}
+
+.headers {
+  padding: 10px 10px;
+  width: 80%;
+  margin: 0px auto;
+  background-color: #cb6341;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  width: 35px;
+  display: inline-block;
+}
+
+nav {
+  top: 0;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border: 5px solid #cb6341;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: linen;
+}
+
+nav .hor-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav a,
+nav b,
+nav .dropdown a {
+  text-decoration: none;
+  color: #777;
+  padding: 14px 0px;
+}
+
+nav a:hover,
+nav b:hover,
+nav .dropdown a:hover {
+  color: #444;
+}
+
+nav a:active,
+nav b:active,
+nav .dropdown a:hover {
+  color: #111;
+}
+
+h2 {
+  width: 80%;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 20px;
+  /*padding-top: 20px;*/
+}
+
+.hamburger {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+  display: sticky;
+  z-index: 2;
+}
+
+form {
+  display: block;
+  width: 80%;
+  margin: 45px auto;
+}
+
+label {
+  text-align: center;
+  display: block;
+}
+
+label[for='email'] {
+  margin-bottom: 35px;
+}
+
+input[type='email'] {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 15px;
+  margin: 5px auto;
+  width: 300px;
+  height: 30px;
+  font-family: 'American Typewriter', serif;
+}
+
+input[type='submit'] {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 300px;
+  height: 30px;
+  margin: 5px auto;
+  background-color: #cb6341;
+  border-radius: 5px;
+  font-family: 'American Typewriter', serif;
+}
+
+iframe {
+  display: block;
+  width: 450px;
+  height: 270px;
+  margin: 35px auto;
+}
+
+#about {
+  width: 75%;
+  margin: 45px auto;
+}
+
+footer {
+  padding: 10px;
+  color: linen;
+  width: 80%;
+  height: auto;
+  background-color: #444;
+  margin: auto;
+  margin-top: 300px;
+}
+
+footer a {
+  padding: 0px 10px;
+  color: linen;
+}
+
+footer span {
+  display: block;
+  float: right;
+}
+
+#produkte {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#angebote {
+  width: 75%;
+  margin: 45px auto;
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
+}
+
+.card-link:hover h4 {
+  color: blue;
+}
+
+.card {
+  margin: 15px;
+  width: 230px;
+  height: 320px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 5px black, 0px 0px 15px grey;
+          box-shadow: 0px 0px 5px black, 0px 0px 15px grey;
+}
+
+.card img {
+  margin: 5%;
+  width: 90%;
+  height: 200px;
+}
+
+.card h4 {
+  margin: 0px 0px;
+  text-align: center;
+}
+
+.card p {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.card button {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(255, 196, 0, 0.932);
+}
+
+/* Fixing Link offset to page ids */
+#home::before,
+#about::before,
+#angebote::before,
+#mehr::before {
+  content: '';
+  display: block;
+  height: 130px;
+  /* fixed header height*/
+  margin: -130px 0 0;
+  /* negative fixed header height */
+}
+
+@media (max-width: 650px) {
+  footer span {
+    margin-top: 10px;
+    float: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  input[type='email'],
+  input[type='submit'] {
+    width: 95%;
+  }
+  #about,
+  #angebote,
+  iframe {
+    width: 90%;
+  }
+  h2 {
+    width: 95%;
+  }
+  .headers,
+  nav,
+  footer {
+    width: 100%;
+  }
+  .responsive {
+    display: none;
+  }
+  .hamburger,
+  .permanent {
+    display: initial;
+  }
+  .dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  .dropdown a {
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
