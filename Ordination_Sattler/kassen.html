@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Krankenkassen Ordination Dr. Sattler</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="drsattler.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/b31d65692e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function countHeight() {
+        var one = document.querySelector('#one'),
+          two = document.querySelector('#two'),
+          three = document.querySelector('#three');
+        var oneStyle = window.getComputedStyle(one),
+          twoStyle = window.getComputedStyle(two),
+          threeStyle = window.getComputedStyle(three);
+        var height =
+          parseInt(oneStyle.height) +
+          parseInt(twoStyle.height) +
+          parseInt(threeStyle.height);
+        return height;
+      }
+
+      function changeMainHeight() {
+        var body = document.querySelector('body');
+        var bodyStyle = window.getComputedStyle(body);
+        if (parseInt(bodyStyle.width) <= 810) {
+          document.getElementById('main').style.height =
+            countHeight() + 100 + 'px';
+        } else {
+          document.getElementById('main').style.height = 700 + 'px';
+        }
+      }
+    </script>
+  </head>
+
+  <body onload="changeMainHeight()">
+    <script type="text/javascript">
+      window.addEventListener('resize', changeMainHeight);
+    </script>
+
+    <header>
+      <img
+        src="kranken.jpg"
+        alt="Praxis Dr. Sattler"
+        width="1094px"
+        height="100%"
+      />
+      <div class="header-content">
+        <h1>Ordination Dr. Heinz Sattler</h1>
+        <h2>Facharzt für Innere Medizin</h2>
+      </div>
+    </header>
+
+    <ul class="navbar">
+      <li class="home-button">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li><a href="termine.html">Termine</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li class="active"><a href="kassen.html">Krankenkassen</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#"
+          >Mehr <i class="fas fa-chevron-circle-down"></i
+        ></a>
+        <div class="dropdown-cont">
+          <a href="termine.html">Termine</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="kassen.html">Krankenkassen</a>
+          <a href="team.html">Team</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </li>
+    </ul>
+
+    <div id="main" class="main">
+      <section class="kassen">
+        <h1 id="one" style="padding-left: 35px;">Krankenkassen:</h1>
+        <div class="kassen-inhalt">
+          <div id="two" class="kassen-info">
+            <h3>
+              Wahlarzt für alle Gebietskrankenkassen und SVB Sozialversicherung
+              der Bauern.
+            </h3>
+            <p>
+              Wahlarztpatienten bekommen eine Rechnung ausgehändigt und können
+              diese dann bei ihrer zuständigen Krankenversicherung einreichen.
+            </p>
+            <p>
+              Es wird Ihnen ein bestimmter Anteil von der Versicherung
+              zurückerstattet.
+            </p>
+            <p>Näheres erklären wir ihnen gerne persönlich.</p>
+          </div>
+          <div id="three" class="vertrag">
+            <h2>Verträge mit den Kassen:</h2>
+            <ul>
+              <li><b>BVA</b></li>
+              <ul>
+                <li>Bundesversicherungsanstalt</li>
+              </ul>
+              <li>
+                <b>VAEB</b>
+                <ul>
+                  <li>Versicherungsanstalt der Eisenbahn und Bergbau</li>
+                </ul>
+              </li>
+              <li>
+                <b>KFA</b>
+                <ul>
+                  <li>Krankenfürsorgeanstalt Wien</li>
+                </ul>
+              </li>
+              <li>
+                <b>SVG</b>
+                <ul>
+                  <li>Sozialversicherungsanstalt Gewerbliche Wirtschaft</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

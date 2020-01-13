@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leistungen Ordination Dr. Sattler</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="drsattler.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/b31d65692e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function countHeight() {
+        var one = document.querySelector('#one'),
+          two = document.querySelector('#two'),
+          three = document.querySelector('#three');
+        var oneStyle = window.getComputedStyle(one),
+          twoStyle = window.getComputedStyle(two),
+          threeStyle = window.getComputedStyle(three);
+        var height =
+          parseInt(oneStyle.height) +
+          parseInt(twoStyle.height) +
+          parseInt(threeStyle.height);
+        return height;
+      }
+
+      function changeMainHeight() {
+        var body = document.querySelector('body');
+        var bodyStyle = window.getComputedStyle(body);
+        if (parseInt(bodyStyle.width) <= 810) {
+          document.getElementById('main').style.height =
+            countHeight() + 100 + 'px';
+        } else {
+          document.getElementById('main').style.height = 900 + 'px';
+        }
+      }
+    </script>
+  </head>
+
+  <body onload="changeMainHeight()">
+    <script type="text/javascript">
+      window.addEventListener('resize', changeMainHeight);
+    </script>
+
+    <header>
+      <img
+        src="leistung.jpg"
+        alt="Praxis Dr. Sattler"
+        width="1094px"
+        height="100%"
+      />
+      <div class="header-content">
+        <h1>Ordination Dr. Heinz Sattler</h1>
+        <h2>Facharzt für Innere Medizin</h2>
+      </div>
+    </header>
+
+    <ul class="navbar">
+      <li class="home-button">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li><a href="termine.html">Termine</a></li>
+      <li class="active"><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="kassen.html">Krankenkassen</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#"
+          >Mehr <i class="fas fa-chevron-circle-down"></i
+        ></a>
+        <div class="dropdown-cont">
+          <a href="termine.html">Termine</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="kassen.html">Krankenkassen</a>
+          <a href="team.html">Team</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </li>
+    </ul>
+
+    <div id="main" style="height: 900px;" class="main">
+      <section class="leistungen">
+        <h1 id="one" style="padding-left: 15px;">Unsere Leistungen:</h1>
+        <div id="two" class="lists">
+          <ul style="float: left">
+            <li>
+              <em style="font-size: 110%;"
+                ><strong>Vorsorgeuntersuchung</strong></em
+              >
+            </li>
+            <li><b>Echokardiographie</b> (Herzultraschall)</li>
+            <li>
+              <b>Blutgefäße</b> (Ultraschalluntersuchung von Venen & Arterien)
+            </li>
+            <li><b>24h Blutdruckmessung</b></li>
+            <li><b>EKG</b> (Elektrokardiogramm)</li>
+            <li><b>Langzeit</b> EKG</li>
+            <li><b>Ergometrie</b> (Belastungs EKG)</li>
+            <li><b>Spirometrie</b> (Lungenfunktionstest)</li>
+            <li><b>Labordiagnostik</b> mit entsprechender Interpretation</li>
+          </ul>
+          <ul>
+            <li><b>OP-Freigaben</b></li>
+            <li>
+              <b>Sonografie</b> (Ultraschalluntersuchung)
+              <ul>
+                <li>Schilddrüse</li>
+                <li>Carotis (Halsschlagader)</li>
+                <li>
+                  gesamter Bauchraum (Galle, Leber, Nieren, Bauchspeicheldrüse,
+                  Milz, etc.)
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Sanfte Endoskopie: </b>
+              <ul>
+                <li>Gastroskopie (Magenspiegelung)</li>
+                <li>Koloskopie (Dickdarmspiegelung)</li>
+                <li>Vorsorge Dickdarmspiegelung</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <p id="three" class="further">
+          Außerdem bieten wir eine ausführliche persönliche Beratung bei
+          Diabetes, Schilddrüsenerkrankungen und Stoffwechselstörungen an.
+        </p>
+      </section>
+      <div class="further"></div>
+    </div>
+  </body>
+</html>

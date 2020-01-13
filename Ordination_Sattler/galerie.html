@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Termine Ordination Dr. Sattler</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="drsattler.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/b31d65692e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function countHeight() {
+        var one = document.querySelector('#one');
+        var oneStyle = window.getComputedStyle(one);
+        var height = parseInt(oneStyle.height);
+        return height;
+      }
+
+      function changeMainHeight() {
+        var body = document.querySelector('body');
+        var bodyStyle = window.getComputedStyle(body);
+        if (parseInt(bodyStyle.width) <= 810) {
+          document.getElementById('main').style.height =
+            countHeight() + 100 + 'px';
+        } else {
+          document.getElementById('main').style.height = 720 + 'px';
+        }
+      }
+      function resetBt() {
+        for (var bt_id_no = 1; bt_id_no <= 6; bt_id_no++) {
+          bt_id = 'bt' + bt_id_no;
+          document.getElementById(bt_id).style.backgroundColor = 'white';
+        }
+      }
+
+      function changeBackground(img_url) {
+        var bt_id_no = parseInt(img_url[3]) + 1;
+        var bt_id = 'bt' + bt_id_no;
+        document.getElementById('rahmen').style.backgroundImage =
+          'url(' + img_url + ')';
+        resetBt();
+        document.getElementById(bt_id).style.backgroundColor =
+          'rgba(255,100,45,1)';
+      }
+      function previousImg() {
+        var img_url = document.getElementById('rahmen').style.backgroundImage;
+        var pos = img_url.lastIndexOf('pic') + 3;
+        var pic_no = parseInt(img_url[pos]);
+        if (pic_no != 0) {
+          var prev_pic_no = parseInt(img_url[pos]) - 1;
+          var new_url = 'pic' + prev_pic_no + '.jpg';
+          changeBackground(new_url);
+        }
+      }
+      function nextImg() {
+        var img_url = document.getElementById('rahmen').style.backgroundImage;
+        var pos = img_url.lastIndexOf('pic') + 3;
+        var pic_no = parseInt(img_url[pos]);
+        if (pic_no != 5) {
+          var next_pic_no = parseInt(img_url[pos]) + 1;
+          var new_url = 'pic' + next_pic_no + '.jpg';
+          changeBackground(new_url);
+        }
+      }
+    </script>
+  </head>
+
+  <body onload="changeMainHeight()">
+    <script type="text/javascript">
+      window.addEventListener('resize', changeMainHeight);
+    </script>
+
+    <header>
+      <img
+        src="galerie.jpg"
+        alt="Praxis Dr. Sattler"
+        width="1094px"
+        height="100%"
+      />
+      <div class="header-content">
+        <h1>Ordination Dr. Heinz Sattler</h1>
+        <h2>Facharzt für Innere Medizin</h2>
+      </div>
+    </header>
+
+    <ul class="navbar">
+      <li class="home-button">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li><a href="termine.html">Termine</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="kassen.html">Krankenkassen</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="active"><a href="galerie.html">Galerie</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#"
+          >Mehr <i class="fas fa-chevron-circle-down"></i
+        ></a>
+        <div class="dropdown-cont">
+          <a href="termine.html">Termine</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="kassen.html">Krankenkassen</a>
+          <a href="team.html">Team</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </li>
+    </ul>
+
+    <div id="main" class="main">
+      <section id="one" class="galerie">
+        <div
+          id="rahmen"
+          style="background-image: url(pic0.jpg);"
+          class="rahmen"
+        ></div>
+        <div class="pagination">
+          <div class="buttons">
+            <button id="bt<<" onclick="previousImg();">&laquo</button>
+            <button
+              style="background-color:rgba(255,100,45,1);"
+              id="bt1"
+              onclick="changeBackground('pic0.jpg');"
+            >
+              1
+            </button>
+            <button id="bt2" onclick="changeBackground('pic1.jpg');">2</button>
+            <button id="bt3" onclick="changeBackground('pic2.jpg');">3</button>
+            <button id="bt4" onclick="changeBackground('pic3.jpg');">4</button>
+            <button id="bt5" onclick="changeBackground('pic4.jpg');">5</button>
+            <button id="bt6" onclick="changeBackground('pic5.jpg');">6</button>
+            <button id="bt>>" onclick="nextImg();">&raquo</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

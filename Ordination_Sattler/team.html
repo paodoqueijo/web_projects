@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Ordination Dr. Sattler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link href="drsattler.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/b31d65692e.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function countHeight() {
+      var one = document.querySelector("#one"),
+          two = document.querySelector("#two");
+      var oneStyle = window.getComputedStyle(one),
+          twoStyle = window.getComputedStyle(two);
+      var height = parseInt(oneStyle.height) + parseInt(twoStyle.height);
+      return height;
+    }
+
+    function changeMainHeight() {
+      var body = document.querySelector("body");
+      var bodyStyle = window.getComputedStyle(body);
+      if(parseInt(bodyStyle.width) <= 810) {
+        document.getElementById("main").style.height = countHeight() + 100 +"px";
+      }
+      else {
+        document.getElementById("main").style.height = 600 + "px";
+      }
+    }
+  </script>
+</head>
+
+<body onload="changeMainHeight()">
+  <script type="text/javascript">
+    window.addEventListener("resize", changeMainHeight);
+  </script>
+
+  <header>
+    <img src="team.jpg" alt="Praxis Dr. Sattler"  width="1094px" height="100%">
+    <div class="header-content">
+      <h1>Ordination Dr. Heinz Sattler</h1>
+      <h2> Facharzt für Innere Medizin</h2>
+    </div>
+  </header>
+  
+  <ul class="navbar">
+    <li class="home-button"><a  href="home.html"><i class="fas fa-home"></i></a></li>
+    <li><a href="termine.html">Termine</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="kassen.html">Krankenkassen</a></li>
+    <li class="active"><a href="team.html">Team</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li  class="dropdown">
+      <a class="dropbtn" href="#">Mehr <i class="fas fa-chevron-circle-down"></i></a>
+      <div class="dropdown-cont">
+        <a href="termine.html">Termine</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="kassen.html">Krankenkassen</a>
+        <a href="team.html">Team</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="kontakt.html">Kontakt</a>
+
+      </div>
+    </li>
+  </ul>
+
+
+
+  <div class="main">
+
+    <section id="info" class="team">
+      <div class="person">
+        <div class="img-cont">
+        <img src="person0.jpg" alt="Dr.Sattler">
+        </div>
+        <div class="info-cont">
+        <h3>Dr. Heinz Sattler</h3>
+        <p><i>Internist</i></p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="img-cont">
+        <img src="person1.jpg" alt="Erika Sattler">
+        </div>
+        <div class="info-cont">
+        <h3>Erika Sattler</h3>
+        <p><i>Diplomierte Gesundheits- <br>und Krankenschwester</i></p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="img-cont">
+        <img src="person2.jpg" alt="Elisabeth Herzog">
+        </div>
+        <div style="word-wrap: break-word;" class="info-cont">
+        <h3>Elisabeth Herzog</h3>
+        <p><i>Ordinationsassistentin</i></p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="img-cont">
+        <img src="person3.jpg" alt="Nicole Leitner">
+        </div>
+        <div class="info-cont">
+        <h3>Nicole Leitner</h3>
+        <p><i>Diplomierte Gesundheits- <br>und Krankenschwester</i></p>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+
+</body>
+</html>
