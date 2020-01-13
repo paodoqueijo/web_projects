@@ -35,15 +35,16 @@
     window.addEventListener("resize", changeMainHeight);
   </script>
   <header>
-    <img src="home.jpg" alt="Praxis Dr. Sattler"  width="1094px" height="100%">
+    <img id="bg-img" src="home.jpg" alt="Praxis Dr. Sattler"  width="1094px" height="100%">
     <div class="header-content">
-      <h1>Ordination Dr. Heinz Sattler</h1>
-      <h2> Facharzt für Innere Medizin</h2>
+      <!--<img src="Logo_Dr. Sattler_edited.eps " alt="logo">-->
+      <h1 id="main-header" style="float: right;">Ordination Dr. Heinz Sattler</h1>
+      <h2 id="main-sub-header"> Facharzt für Innere Medizin</h2>
     </div>
   </header>
   
   <ul class="navbar">
-    <li class="home-button active"><a  href="home.html"><i class="fas fa-home"></i></a></li>
+    <li class="home-button active"><a  id="home-btn" href="home.html"><img src="Logo_Dr. Sattler_white.eps " alt="home button"></a></li>
     <li><a href="termine.html">Termine</a></li>
     <li><a href="leistungen.html">Leistungen</a></li>
     <li><a href="kassen.html">Krankenkassen</a></li>
@@ -69,8 +70,11 @@
 
   <div id="main" class="main">
     <article id="one" class="about">
-      <h1 >Willkomen auf unserer Ordinationswebsite!</h1>
-      <p >Seit 1997 bemühe Ich mich gemeinsam mit meinem Team um die Gesundheit und das Wohlbefinden unserer Patienten. Dabei ist es uns allen besonders wichtig, sich genügend Zeit für die individuellen Bedürfnisse jedes Einzelnen zu nehmen. Neben blablabal bieten wir auch viele weitere medizinische Dienstleistungen an. Das Team und Ich würden uns sehr freuen, Sie bald in unserer Praxis begrüßen zu dürfen.</p>
+      <h1 >Willkomen auf unserer Ordinationswebsite!</h1->
+      
+      <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium illo reiciendis quasi quaerat officiis nam, labore at eaque autem delectus ad porro qui est veritatis voluptatibus saepe beatae? Incidunt, beatae.
+      Libero illum sequi adipisci eligendi animi veritatis ea velit, id alias placeat optio magnam soluta vero rem. Amet voluptatum dolorem consectetur error vitae eum, consequatur mollitia ipsum totam tenetur voluptate.
+      Esse nostrum quos aspernatur sit tenetur dolorem ipsam magnam nam aliquam, itaque quibusdam, officiis incidunt repellendus, quisquam unde? Harum ex et reiciendis obcaecati sequi, eum soluta debitis quis deserunt provident.<!--Seit 1997 bemühe Ich mich gemeinsam mit meinem Team um die Gesundheit und das Wohlbefinden unserer Patienten. Dabei ist es uns allen besonders wichtig, sich genügend Zeit für die individuellen Bedürfnisse jedes Einzelnen zu nehmen. Neben blablabal bieten wir auch viele weitere medizinische Dienstleistungen an. Das Team und Ich würden uns sehr freuen, Sie bald in unserer Praxis begrüßen zu dürfen.--></p>
       <p style="float: right;">Herzlichst,<br> Dr. Heinz Sattler</p>
     </article>
 
@@ -88,7 +92,7 @@
       <h2 style="margin-bottom: 55px;" class="side-info-cont"><i title="Telefon" class="fas fa-phone-alt"></i> : +43 (0)2167 2592</h2>
       <br>
       <div id="rest-info">
-      <h3 style="" class="side-info-cont">&copy Dr. Heinz Sattler, 2020</h2>
+      <h3  class="side-info-cont">&copy Dr. Heinz Sattler, 2020</h2>
       <h3 class="side-info-cont"><a href="impressum.html">Impressum & Datenschutz</a></h2>
       </div>
     </section>

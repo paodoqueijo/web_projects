@@ -1,118 +1,150 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Kontakt Ordination Dr. Sattler</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link href="drsattler.css" rel="stylesheet" type="text/css">
-  <script src="https://kit.fontawesome.com/b31d65692e.js" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    function countHeight() {
-      var one = document.querySelector("#one"),
-          two = document.querySelector("#two");
-      var oneStyle = window.getComputedStyle(one),
+  <head>
+    <title>Kontakt Ordination Dr. Sattler</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="drsattler.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/b31d65692e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function countHeight() {
+        var one = document.querySelector('#one'),
+          two = document.querySelector('#two');
+        var oneStyle = window.getComputedStyle(one),
           twoStyle = window.getComputedStyle(two);
-      var height = parseInt(oneStyle.height) + parseInt(twoStyle.height);
-      return height;
-    }
-
-    function changeMainHeight() {
-      var body = document.querySelector("body");
-      var bodyStyle = window.getComputedStyle(body);
-      if(parseInt(bodyStyle.width) <= 810) {
-        document.getElementById("main").style.height = countHeight() + 100 +"px";
+        var height = parseInt(oneStyle.height) + parseInt(twoStyle.height);
+        return height;
       }
-      else {
-        document.getElementById("main").style.height = 600 + "px";
-      }
-    }
-  </script>
-</head>
 
-<body onload="changeMainHeight()">
-  <script type="text/javascript">
-    window.addEventListener("resize", changeMainHeight);
-  </script>
-
-  <header>
-    <img src="kontakt.jpg" alt="Praxis Dr. Sattler"  width="1094px" height="100%">
-    <div class="header-content">
-      <h1>Ordination Dr. Heinz Sattler</h1>
-      <h2> Facharzt für Innere Medizin</h2>
-    </div>
-  </header>
-  
-  <ul class="navbar">
-    <li class="home-button "><a  href="home.html"><i class="fas fa-home"></i></a></li>
-    <li><a href="termine.html">Termine</a></li>
-    <li><a href="leistungen.html">Leistungen</a></li>
-    <li ><a href="kassen.html">Krankenkassen</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="galerie.html">Galerie</a></li>
-    <li class="active"><a href="kontakt.html">Kontakt</a></li>
-    <li  class="dropdown">
-      <a class="dropbtn" href="#">Mehr <i class="fas fa-chevron-circle-down"></i></a>
-      <div class="dropdown-cont">
-        <a href="termine.html">Termine</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="kassen.html">Krankenkassen</a>
-        <a href="team.html">Team</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="kontakt.html">Kontakt</a>
-
-      </div>
-    </li>
-  </ul>
-
-
-
-  <div style="height: 600px" id="main" class="main">
-
-    <section id="one" class="kontakt-side-info">
-      <h1 class="side-info-cont">Ordination Dr. Heinz Sattler</h1>
-      <h2 class="side-info-cont">Adresse:</h2>
-      <p class="side-info-cont">Hauptplatz 47</p>
-      <p class="side-info-cont">7100 Neusield am See</p>
-      <p class="side-info-cont">Österreich</p>
-
-      <br>
-      <h2 class="side-info-cont"><i title="Telefon" class="fas fa-phone-alt"></i> : +43 (0)2167 2592</h2>
-      <h2 class="side-info-cont"><i title="E-Mail" class="fas fa-envelope"></i> : <a href="mailto:heinzsattler@aon.at">heinzsattler@aon.at</a></h2>
-    </section>
-
-    <section id="two" class="map-container">
-    <h2 style="margin: 30px;">Finden Sie uns auf Google Maps:</h2>
-    <div id="map"></div>
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        var ordi = {lat: 47.949973 , lng: 16.841019};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 15, center: ordi});
-        // The marker, positioned at Uluru
-        var contentString = '<h1> Ordination Dr. Sattler </h1>' + '<h2><a target="_blank" href = "https://www.google.com/maps/place/Dr.+Heinz+Sattler/@47.9508468,16.838368,16.15z/data=!4m5!3m4!1s0x0:0xe1fa3e6c15c8011e!8m2!3d47.9497573!4d16.8410195?hl=en-US">View on Google Maps<a><h2>';
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
-
-        var marker = new google.maps.Marker({position: ordi, map: map, title: 'Ordination Dr. Sattler'});
-
-        marker.addListener('click', function() {infowindow.open(map, marker);});
+      function changeMainHeight() {
+        var body = document.querySelector('body');
+        var bodyStyle = window.getComputedStyle(body);
+        if (parseInt(bodyStyle.width) <= 810) {
+          document.getElementById('main').style.height =
+            countHeight() + 100 + 'px';
+        } else {
+          document.getElementById('main').style.height = 600 + 'px';
+        }
       }
     </script>
-    <!--Load the API from the specified URL
+  </head>
+
+  <body onload="changeMainHeight()">
+    <script type="text/javascript">
+      window.addEventListener('resize', changeMainHeight);
+    </script>
+
+    <header>
+      <img
+        src="kontakt.jpg"
+        alt="Praxis Dr. Sattler"
+        width="1094px"
+        height="100%"
+      />
+      <div class="header-content">
+        <h1>Ordination Dr. Heinz Sattler</h1>
+        <h2>Facharzt für Innere Medizin</h2>
+      </div>
+    </header>
+
+    <ul class="navbar">
+      <li class="home-button">
+        <a id="home-btn" href="home.html"
+          ><img src="Logo_Dr. Sattler_white.eps " alt="home button"
+        /></a>
+      </li>
+      <li><a href="termine.html">Termine</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="kassen.html">Krankenkassen</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li class="active"><a href="kontakt.html">Kontakt</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#"
+          >Mehr <i class="fas fa-chevron-circle-down"></i
+        ></a>
+        <div class="dropdown-cont">
+          <a href="termine.html">Termine</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="kassen.html">Krankenkassen</a>
+          <a href="team.html">Team</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </li>
+    </ul>
+
+    <div style="height: 600px" id="main" class="main">
+      <section id="one" class="kontakt-side-info">
+        <h1 class="side-info-cont">Ordination Dr. Heinz Sattler</h1>
+        <h2 class="side-info-cont">Adresse:</h2>
+        <p class="side-info-cont">Hauptplatz 47</p>
+        <p class="side-info-cont">7100 Neusield am See</p>
+        <p class="side-info-cont">Österreich</p>
+
+        <br />
+        <h2 class="side-info-cont">
+          <i title="Telefon" class="fas fa-phone-alt"></i> : +43 (0)2167 2592
+        </h2>
+        <h2 class="side-info-cont">
+          <i title="E-Mail" class="fas fa-envelope"></i> :
+          <a href="mailto:heinzsattler@aon.at">heinzsattler@aon.at</a>
+        </h2>
+      </section>
+
+      <section id="two" class="map-container">
+        <h2 style="margin: 30px;">Finden Sie uns auf Google Maps:</h2>
+        <div id="map"></div>
+        <script>
+          // Initialize and add the map
+          function initMap() {
+            // The location of Uluru
+            var ordi = { lat: 47.949973, lng: 16.841019 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: ordi
+            });
+            // The marker, positioned at Uluru
+            var contentString =
+              '<h1> Ordination Dr. Sattler </h1>' +
+              '<h2><a target="_blank" href = "https://www.google.com/maps/place/Dr.+Heinz+Sattler/@47.9508468,16.838368,16.15z/data=!4m5!3m4!1s0x0:0xe1fa3e6c15c8011e!8m2!3d47.9497573!4d16.8410195?hl=en-US">View on Google Maps<a><h2>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+              position: ordi,
+              map: map,
+              title: 'Ordination Dr. Sattler'
+            });
+
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          }
+        </script>
+        <!--Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc0AiXjPMduhzDqKFK9eLY3bV95Gqxmxk&callback=initMap">
-    </script>
-    </section>
-  </div>
-
-</body>
+        <script
+          async
+          defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc0AiXjPMduhzDqKFK9eLY3bV95Gqxmxk&callback=initMap"
+        ></script>
+      </section>
+    </div>
+  </body>
 </html>

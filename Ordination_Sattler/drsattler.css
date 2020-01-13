@@ -1,3 +1,5 @@
+/** @format */
+
 * {
   box-sizing: border-box;
 }
@@ -19,15 +21,10 @@ header {
   overflow: hidden;
 }
 
-header img {
+header > img {
   position: absolute;
   filter: blur(2px);
-  transition: 0.4s;
   object-fit: cover;
-}
-
-header:hover img {
-  filter: unset;
 }
 
 header div.header-content {
@@ -35,7 +32,7 @@ header div.header-content {
   top: 0px;
   width: 100%;
   padding: 0 0 2vw 2vw;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 0px 0px 3px black;
 }
 
 div.header-content h1 {
@@ -73,6 +70,7 @@ ul.navbar {
 
 ul.navbar li {
   float: left;
+  height: 100%;
 }
 
 ul.navbar a,
@@ -84,6 +82,18 @@ ul.navbar .dropbtn {
   text-align: center;
   padding: 14px;
   text-decoration: none;
+}
+
+ul.navbar #home-btn {
+  height: 56px;
+  width: 56px;
+  padding: 10px;
+  margin: 0px;
+}
+
+#home-btn img {
+  width: 100%;
+  height: 100%;
 }
 
 ul.navbar li a:hover,
@@ -98,20 +108,25 @@ ul.navbar li.dropdown {
 }
 
 ul.navbar .dropbtn {
-  min-width: 180px;
+  width: 40vw;
   text-align: right;
 }
 
 ul.navbar .dropdown-cont {
   padding: 0;
   margin: 0;
-  display: none;
+  display: block;
   position: absolute;
   background-color: linen;
-  min-width: 180px;
-  box-shadow: 0px 0px 3px black;
+  width: 40vw;
   z-index: 1;
   color: black;
+  border-bottom-left-radius: 3px;
+  border-left: 2px solid rgba(255, 180, 45, 0.9);
+  border-bottom: 2px solid rgba(255, 180, 45, 0.9);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
 }
 
 ul.navbar .dropdown-cont a {
@@ -126,6 +141,7 @@ ul.navbar .dropdown-cont a {
 
 ul.navbar .dropdown:hover .dropdown-cont {
   display: block;
+  transform: scaleY(1);
 }
 
 ul.navbar .dropdown-cont a:hover {
@@ -501,14 +517,19 @@ p.side-info-cont {
   ul.navbar a,
   ul.navbar .dropbtn {
     font-size: 15px;
+    height: 50px;
   }
 
   ul.navbar {
     height: 50px;
   }
 
+  ul.navbar #home-btn {
+    height: 50px;
+    width: 50px;
+  }
+
   ul.navbar .dropbtn {
-    min-width: 125px;
     text-align: right;
   }
 
@@ -673,4 +694,5 @@ p.side-info-cont {
 @media screen and (max-width: 950px) {
   .lists {
     padding-top: 0;
+  }
 }
