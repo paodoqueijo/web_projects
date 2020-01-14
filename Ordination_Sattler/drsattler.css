@@ -1,5 +1,9 @@
 /** @format */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -116,10 +120,6 @@ ul.navbar .dropbtn {
   position: relative;
 }
 
-.dropbtn:focus {
-  outline: 0;
-}
-
 ul.navbar .dropdown-cont {
   padding: 0;
   display: block;
@@ -147,19 +147,8 @@ ul.navbar .dropdown-cont a {
   width: 100%;
 }
 
-.open-dd {
-  /*  display: block;
-  transform: scaleY(2);*/
-  color: blue;
-}
-
-.test {
-  background-color: blue;
-}
-
 ul.navbar .dropdown-cont a:hover {
   background-color: rgba(255, 100, 45, 0.7);
-  /*text-shadow: unset;*/
 }
 
 ul.navbar li.info-link {
@@ -469,37 +458,64 @@ p.side-info-cont {
   padding: 35px 0px 35px 35px;
 }
 
-.imp-dat {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: red;
+.headings {
+  width: 100%;
+  padding: 15px;
 }
 
-.impressum {
-  position: relative;
+.rest {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
-}
-
-.headings,
-.c {
-  position: relative;
-  background-color: yellow;
-  width: 100%;
-  height: 500px;
+  justify-content: space-evenly;
+  border-bottom: 3px solid rgba(255, 180, 45, 1);
 }
 
 .a,
+.b,
+.c {
+  padding: 5px;
+  display: inline-block;
+  width: 366px;
+  height: auto;
+}
+
+.a,
+.c {
+  background-color: linen;
+}
+
 .b {
-  position: relative;
-  height: 400px;
-  background-color: white;
-  width: 50%;
+  background-color: rgba(255, 180, 45, 0.4);
 }
 
 .datenschutz {
-  position: relative;
+  padding: 15px;
+}
+
+.totop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.totop > i {
+  font-size: 30px;
+  color: rgba(255, 180, 45, 0.8);
+}
+
+.totop:active > i {
+  color: rgba(255, 180, 45, 1);
+  background-color: rgba(128, 128, 128, 0.35);
+  border-radius: 50%;
+}
+
+.dropbtn:focus,
+.totop:focus {
+  outline: 0;
 }
 
 /* MOBILE GALLERY */
@@ -562,6 +578,16 @@ p.side-info-cont {
 
 /* MOBILE DISPLAY*/
 @media screen and (max-width: 810px) {
+  .rest {
+    flex-direction: column;
+  }
+
+  .a,
+  .b,
+  .c {
+    width: 100%;
+  }
+
   .zeiten h2,
   .zeiten table {
     width: 80%;
