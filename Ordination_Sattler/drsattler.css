@@ -513,8 +513,7 @@ p.side-info-cont {
   border-radius: 50%;
 }
 
-.dropbtn:focus,
-.totop:focus {
+button:focus {
   outline: 0;
 }
 
