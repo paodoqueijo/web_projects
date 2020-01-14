@@ -6,7 +6,7 @@
 
 body {
   font-family: 'DIN Condensed', Helvetica, sans-serif;
-  background-image: url(https://github.com/paodoqueijo/web_projects/blob/gh-pages/survey%20form/img/lan.png);
+  background-image: url("../img/lan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
