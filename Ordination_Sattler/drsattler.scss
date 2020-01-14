@@ -1,10 +1,10 @@
 /** @format */
+
 html {
   scroll-behavior: smooth;
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -27,9 +27,7 @@ header {
 
 header > img {
   position: absolute;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -104,7 +102,7 @@ ul.navbar #home-btn {
 
 ul.navbar li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #ffb42d;
+  background-color: rgba(255, 180, 45, 1);
   /*text-shadow: 1px 1px 3px black;*/
 }
 
@@ -134,14 +132,9 @@ ul.navbar .dropdown-cont {
   border-bottom-left-radius: 3px;
   border-left: 3px solid rgba(255, 180, 45, 0.9);
   border-bottom: 3px solid rgba(255, 180, 45, 0.9);
-  -webkit-transform: scaleY(0);
   transform: scaleY(0);
-  -webkit-transform-origin: top;
   transform-origin: top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 ul.navbar .dropdown-cont a {
@@ -212,7 +205,7 @@ p.side-info-cont {
 }
 
 .active {
-  background-color: #ff642d;
+  background-color: rgba(255, 100, 45, 1);
 }
 
 .kontakt-side-info {
@@ -239,7 +232,6 @@ p.side-info-cont {
   width: 90%;
   margin: auto;
   border: 3px solid rgba(255, 180, 45, 0.9);
-  -webkit-box-shadow: 5px 8px 5px grey;
   box-shadow: 5px 8px 5px grey;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -305,7 +297,6 @@ p.side-info-cont {
   background-size: 100%;
   width: 640px;
   height: 480px;
-  -webkit-box-shadow: 3px 3px 5px;
   box-shadow: 3px 3px 5px;
   border: 3px solid linen;
   margin: 40px auto;
@@ -324,7 +315,6 @@ p.side-info-cont {
   width: 35px;
   text-align: center;
   display: inline-block;
-  -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   border: 2px solid rgba(255, 180, 45, 0.9);
   font-size: 20px;
@@ -334,7 +324,6 @@ p.side-info-cont {
 .pagination button:hover {
   width: 37px;
   height: 35px;
-  -webkit-box-shadow: 4px 4px 8px black;
   box-shadow: 4px 4px 8px black;
 }
 
@@ -344,27 +333,15 @@ p.side-info-cont {
 }
 
 .team {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   margin-top: 55px;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .person {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 50%;
   height: 200px;
@@ -390,18 +367,10 @@ p.side-info-cont {
 
 .termine {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   height: 70%;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 110%;
 }
@@ -413,23 +382,14 @@ p.side-info-cont {
   background-color: linen;
   height: 100%;
   min-height: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .zeiten table tr:nth-child(odd) {
-  background-color: #ffdcb4;
+  background-color: rgba(255, 220, 180, 1);
 }
 
 .zeiten table tr:hover td {
@@ -467,23 +427,14 @@ p.side-info-cont {
 }
 
 .zeiten-pics {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 200px;
   min-width: 200px;
   height: 100%;
   background-color: linen;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   min-height: 250px;
 }
@@ -500,7 +451,7 @@ p.side-info-cont {
   position: absolute;
   width: 100%;
   height: 30%;
-  background-color: #ffb42d;
+  background-color: rgba(255, 180, 45, 1);
   min-height: 180px;
   font-size: 130%;
   text-align: center;
@@ -515,17 +466,10 @@ p.side-info-cont {
 .rest {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  border-bottom: 3px solid #ffb42d;
+  border-bottom: 3px solid rgba(255, 180, 45, 1);
 }
 
 .a,
@@ -564,7 +508,7 @@ p.side-info-cont {
 }
 
 .totop:active > i {
-  color: #ffb42d;
+  color: rgba(255, 180, 45, 1);
   background-color: rgba(128, 128, 128, 0.35);
   border-radius: 50%;
 }
@@ -578,44 +522,54 @@ button:focus {
   ul.navbar .dropdown-cont {
     top: 50px;
   }
+
   .rahmen {
     width: 98%;
     height: 70vw;
-    -webkit-box-shadow: 3px 3px 5px;
     box-shadow: 3px 3px 5px;
   }
+
   .leistungen {
     font-size: 110%;
   }
+
   ul.navbar a,
   ul.navbar .dropbtn {
     font-size: 15px;
     height: 50px;
   }
+
   ul.navbar {
     height: 50px;
   }
+
   ul.navbar #home-btn {
     height: 50px;
     width: 50px;
   }
+
   ul.navbar .dropbtn {
     text-align: right;
   }
+
   .about p {
     font-size: 15px;
   }
+
   p.side-info-cont {
     font-size: 105%;
   }
+
   .person {
     font-size: 80%;
   }
+
   .person h3,
   .person p {
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .kassen-info {
     font-size: 105%;
   }
@@ -624,43 +578,44 @@ button:focus {
 /* MOBILE DISPLAY*/
 @media screen and (max-width: 810px) {
   .rest {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .a,
   .b,
   .c {
     width: 100%;
   }
+
   .zeiten h2,
   .zeiten table {
     width: 80%;
   }
+
   .person:nth-child(even) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
+
   .termine {
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+
   .zeiten-pics img {
     width: 50%;
     height: 100%;
   }
+
   .termine,
   .terminvergabe {
     height: auto;
   }
+
   .zeiten-pics,
   .urlaub,
   .zeiten {
     width: 100%;
   }
+
   .galerie {
     border-bottom: 3px solid rgba(255, 180, 45, 0.9);
     padding-bottom: 150px;
@@ -668,38 +623,48 @@ button:focus {
   .further {
     text-align: initial;
   }
+
   .team {
     margin-top: 15px;
   }
+
   .info-cont {
     margin-top: 0px;
   }
+
   .kassen-inhalt {
     height: unset;
   }
+
   .kassen-info,
   .vertrag {
     width: 100%;
     height: auto;
     float: unset;
   }
+
   .person:nth-child(even) {
     background-color: linen;
   }
+
   .img-cont img {
     margin: auto;
   }
+
   .person:nth-child(even) img {
     border: 4px solid white;
   }
+
   .lists > ul {
     float: left;
     width: 100%;
     height: 100%;
   }
+
   .main {
     border: none;
   }
+
   .map-container,
   .kontakt-side-info,
   .side-info,
@@ -707,12 +672,15 @@ button:focus {
   .lists {
     height: auto;
   }
+
   body {
     border: none;
   }
+
   div.header-content h1 {
     font-size: 30px;
   }
+
   .side-info,
   .about,
   .kontakt-side-info,
@@ -721,26 +689,32 @@ button:focus {
     width: 100%;
     padding-top: 35px;
   }
+
   .side-info {
     border-top: 5px solid rgba(255, 180, 45, 0.9);
     border-right: none;
     border-bottom: 5px solid rgba(255, 180, 45, 0.9);
   }
+
   .kontakt-side-info {
     border-bottom: 5px solid rgba(255, 180, 45, 0.9);
     border-left: none;
   }
+
   div.header-content h2 {
     font-size: 27px;
   }
+
   ul.navbar li {
     display: none;
   }
+
   ul.navbar li.home-button,
   ul.navbar li.info-link,
   ul.navbar li.active {
     display: initial;
   }
+
   ul.navbar li.dropdown {
     display: inline-block;
   }
@@ -751,4 +725,3 @@ button:focus {
     padding-top: 0;
   }
 }
-/*# sourceMappingURL=drsattler.css.map */
