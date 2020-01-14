@@ -5,7 +5,7 @@ html {
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -28,9 +28,9 @@ header {
 header > img {
   position: absolute;
   -webkit-filter: blur(2px);
-  filter: blur(2px);
+          filter: blur(2px);
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 header div.header-content {
@@ -135,9 +135,9 @@ ul.navbar .dropdown-cont {
   border-left: 3px solid rgba(255, 180, 45, 0.9);
   border-bottom: 3px solid rgba(255, 180, 45, 0.9);
   -webkit-transform: scaleY(0);
-  transform: scaleY(0);
+          transform: scaleY(0);
   -webkit-transform-origin: top;
-  transform-origin: top;
+          transform-origin: top;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -240,7 +240,7 @@ p.side-info-cont {
   margin: auto;
   border: 3px solid rgba(255, 180, 45, 0.9);
   -webkit-box-shadow: 5px 8px 5px grey;
-  box-shadow: 5px 8px 5px grey;
+          box-shadow: 5px 8px 5px grey;
   margin-top: 50px;
   margin-bottom: 100px;
 }
@@ -306,7 +306,7 @@ p.side-info-cont {
   width: 640px;
   height: 480px;
   -webkit-box-shadow: 3px 3px 5px;
-  box-shadow: 3px 3px 5px;
+          box-shadow: 3px 3px 5px;
   border: 3px solid linen;
   margin: 40px auto;
 }
@@ -335,7 +335,7 @@ p.side-info-cont {
   width: 37px;
   height: 35px;
   -webkit-box-shadow: 4px 4px 8px black;
-  box-shadow: 4px 4px 8px black;
+          box-shadow: 4px 4px 8px black;
 }
 
 .pagination button:active {
@@ -349,11 +349,11 @@ p.side-info-cont {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 55px;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .person {
@@ -362,10 +362,10 @@ p.side-info-cont {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   width: 50%;
   height: 200px;
 }
@@ -395,14 +395,14 @@ p.side-info-cont {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 70%;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 110%;
 }
 
@@ -417,15 +417,15 @@ p.side-info-cont {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .zeiten table tr:nth-child(odd) {
@@ -472,19 +472,19 @@ p.side-info-cont {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 200px;
   min-width: 200px;
   height: 100%;
   background-color: linen;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 250px;
 }
 
@@ -520,11 +520,11 @@ p.side-info-cont {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-bottom: 3px solid #ffb42d;
 }
 
@@ -582,7 +582,7 @@ button:focus {
     width: 98%;
     height: 70vw;
     -webkit-box-shadow: 3px 3px 5px;
-    box-shadow: 3px 3px 5px;
+            box-shadow: 3px 3px 5px;
   }
   .leistungen {
     font-size: 110%;
@@ -626,8 +626,8 @@ button:focus {
   .rest {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .a,
   .b,
@@ -641,12 +641,12 @@ button:focus {
   .person:nth-child(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .termine {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .zeiten-pics img {
     width: 50%;

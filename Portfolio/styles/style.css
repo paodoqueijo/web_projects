@@ -1,15 +1,19 @@
 /** @format */
 body {
-  font-family: 'Futura', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  max-width: 1500px;
+  margin: auto;
+  background-color: #ebe8e6;
 }
 
 nav {
-  background: -webkit-gradient(linear, left top, right top, from(#333), to(#555));
-  background: linear-gradient(left, #333, #555);
-  padding: 10px 10px;
-  height: 25px;
+  background: -webkit-gradient(linear, right top, left top, from(#334646), to(#465e5d));
+  background: linear-gradient(right, #334646, #465e5d);
+  padding-top: 10px;
+  padding-right: 10px;
+  height: 30px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -18,7 +22,7 @@ nav {
 nav a {
   padding: 0px 5px;
   text-decoration: none;
-  color: white;
+  color: #ebe8e6;
   float: right;
 }
 
@@ -29,23 +33,35 @@ nav a:hover {
 #welcome-section {
   padding: 100px 10% 50px 10%;
   height: 100vh;
-  background: linear-gradient(-45deg, #16e6b2, #d6fff6);
+  background: linear-gradient(45deg, teal, #004848);
 }
 
 #welcome-section h2 {
   float: right;
 }
 
+#welcome-section h1,
+#welcome-section h2 {
+  color: #ebe8e6;
+}
+
 h1,
 h2 {
-  font-weight: lighter;
+  font-size: 250%;
+  font-weight: bolder;
   padding: 0;
   margin: 0;
   padding: 15px;
 }
 
+h1 {
+  margin: 20vh 0px;
+}
+
 #projects {
-  background: linear-gradient(45deg, #eee, #ddd);
+  background: linear-gradient(45deg, #d7e9e9, #b9cbca);
+  width: 100%;
+  height: auto;
 }
 
 #projects h2 {
@@ -65,17 +81,52 @@ h2 {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-bottom: 400px;
 }
 
 .project-tile {
   content: '';
-  width: 250px;
-  height: 300px;
-  background-color: #eee;
+  width: 420px;
+  height: 520px;
+  background-color: #ebe8e6;
   -webkit-box-shadow: 0 0 10px 4px grey;
           box-shadow: 0 0 10px 4px grey;
   border-radius: 2px;
-  margin: 15px 0;
+  margin: 35px 20px;
+}
+
+.project-tile img {
+  display: block;
+  margin: auto;
+  margin-top: 2.5%;
+  width: 95%;
+  height: 75%;
+  border: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.project-tile a {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  margin: auto;
+}
+
+.project-tile a h3 {
+  margin: auto;
+  text-align: center;
+  padding-top: 11px;
+  border-radius: 2px;
+  margin-top: 33px;
+  width: 65%;
+  height: 40px;
+  background-color: teal;
+  color: #ebe8e6;
+}
+
+.project-tile a:hover h3 {
+  background-color: #004848;
 }
 
 .disabled {
