@@ -9,7 +9,7 @@
     <title>Hey, I am Michael!</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <script
@@ -27,8 +27,36 @@
       <a class="disabled" href="#also">I also do this</a>
     </nav>
     <section id="welcome-section">
-      <h1>Hey, I am Michael Sattler!</h1>
-      <h2>I am a Developer</h2>
+      <div class="block">
+        <div class="about-text">
+          <h1 id="about-h1">Hey, I am Michael Sattler!</h1>
+          <p id="about-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            labore, laboriosam corrupti fugit quos, similique doloribus ut
+            veritatis eligendi nulla sit ducimus eos hic ipsa magnam, aliquid in
+            assumenda. Officia.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="skills">
+          <h2 id="skills-h2">I am a Developer</h2>
+          <h3 id="skills-h3">These are some technologies I am using:</h3>
+          <ul id="skills-list">
+            <li>C/C++</li>
+            <li>Python</li>
+            <li>MATLAB</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Sass</li>
+            <li>JavaScript</li>
+            <li>Affintiy Designer</li>
+            <li>Reaper</li>
+            <li>Ableton Live</li>
+            <li>Pure Data</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
@@ -55,11 +83,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              style="height: 65%;"
-              src="img/preview_webshop.gif"
-              alt="preview webshop"
-            />
+            <img src="img/preview_webshop.gif" alt="preview webshop" />
             <h3 style="margin-top: 83px;">Fake Webshop</h3>
           </a>
         </div>
@@ -105,5 +129,22 @@
       <span>Created by Michael Sattler</span>
       <span id="span2">&copy 2020</span>
     </footer>
+
+    <script>
+      var about_h1 = document.getElementById('about-h1');
+      var about_p1 = document.getElementById('about-p');
+      var skills_h2 = document.getElementById('skills-h2');
+      var skills_h3 = document.getElementById('skills-h3');
+      var skills_list = document.getElementById('skills-list');
+
+      about_h1.addEventListener('click', () =>
+        about_p1.classList.toggle('inscope')
+      );
+
+      skills_h2.addEventListener('click', () => {
+        skills_h3.classList.toggle('inscope');
+        skills_list.classList.toggle('inscope');
+      });
+    </script>
   </body>
 </html>
