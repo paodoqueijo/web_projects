@@ -1,4 +1,9 @@
 /** @format */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -11,16 +16,16 @@ body {
 nav {
   background: -webkit-gradient(linear, right top, left top, from(#334646), to(#465e5d));
   background: linear-gradient(right, #334646, #465e5d);
-  padding-top: 10px;
-  padding-right: 10px;
-  height: 30px;
+  width: 100%;
+  padding: 10px 5px 5px 0px;
+  height: 40px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
 nav a {
-  padding: 0px 5px;
+  padding: 0px 8px;
   text-decoration: none;
   color: #ebe8e6;
   float: right;
@@ -62,11 +67,12 @@ h1 {
   background: linear-gradient(45deg, #d7e9e9, #b9cbca);
   width: 100%;
   height: auto;
+  padding-bottom: 50px;
 }
 
 #projects h2 {
   text-align: center;
-  padding: 25px 0;
+  padding: 50px 0;
 }
 
 #projects #tiles {
@@ -81,7 +87,27 @@ h1 {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-bottom: 400px;
+  padding: 20px 0px 80px 0px;
+}
+
+#projects > a {
+  display: block;
+  margin: auto;
+  width: 36%;
+  height: 60px;
+  background-color: #465e5d;
+  margin-bottom: 100px;
+  color: #ebe8e6;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 140%;
+  border-radius: 2px;
+  font-weight: bolder;
+}
+
+#projects > a:hover {
+  background-color: #334646;
 }
 
 .project-tile {
@@ -107,8 +133,6 @@ h1 {
 }
 
 .project-tile a {
-  position: relative;
-  z-index: 1;
   text-decoration: none;
   margin: auto;
 }
@@ -116,7 +140,7 @@ h1 {
 .project-tile a h3 {
   margin: auto;
   text-align: center;
-  padding-top: 11px;
+  padding-top: 5px;
   border-radius: 2px;
   margin-top: 33px;
   width: 65%;
@@ -131,5 +155,56 @@ h1 {
 
 .disabled {
   display: none;
+}
+
+#contact-section {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(45deg, #465e5d, #334646);
+  color: #ebe8e6;
+}
+
+#contact-section h2,
+#contact-section h3 {
+  text-align: center;
+}
+
+#contact-section .contact-links {
+  margin: 0;
+  padding: 45px 0px;
+  text-align: center;
+}
+
+#contact-section .contact-links a {
+  color: #ebe8e6;
+  text-decoration: none;
+  font-size: 35px;
+  padding: 0 25px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background-color: #798181;
+  color: #ebe8e6;
+}
+
+footer span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+footer #span2 {
+  left: unset;
+  right: 10px;
+}
+
+@media (max-width: 800px) {
+  #contact-section .contact-links a {
+    display: block;
+    margin-bottom: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
