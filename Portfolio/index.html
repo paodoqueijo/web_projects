@@ -35,7 +35,10 @@
     <section id="welcome-section">
       <div class="block">
         <div class="about-text">
-          <h1 id="about-h1">Hey, I am Michael Sattler!</h1>
+          <h1 id="about-h1">
+            Hey, I am Michael Sattler!
+            <span id="ab1" class="arrow-bdy"><span class="arrow"></span></span>
+          </h1>
           <p id="about-p">
             Born in 1996 near Vienna, Austria and still trying to figure all of
             this out. Currently I am very interested in web development
@@ -48,10 +51,17 @@
         </div>
       </div>
       <div class="block">
-        <div class="skills">
-          <h2 id="skills-h2">I am a Developer</h2>
-          <h3 id="skills-h3">These are some technologies I am using:</h3>
-          <ul id="skills-list">
+        <div id="skills" class="skills">
+          <h2 id="skills-h2">
+            I am a Developer
+            <span id="ab2" class="arrow-bdy-two"
+              ><span class="arrow"></span
+            ></span>
+          </h2>
+          <h3 class="disabled" id="skills-h3">
+            These are some technologies I am using:
+          </h3>
+          <ul class="disabled" id="skills-list">
             <li>
               <img
                 id="c-icon"
@@ -135,7 +145,7 @@
             rel="noopener noreferrer"
           >
             <img src="img/preview_webshop.gif" alt="preview webshop" />
-            <h3 style="margin-top: 83px;">Fake webshop</h3>
+            <h3 style="margin-top: 83px;">Webshop</h3>
           </a>
         </div>
 
@@ -200,6 +210,9 @@
       var skills_list = document.getElementById('skills-list');
       var about_btn = document.getElementById('about-btn');
       var welcome_sct = document.getElementById('welcome-section');
+      var skills = document.getElementById('skills');
+      var ab1 = document.getElementById('ab1');
+      var ab2 = document.getElementById('ab2');
 
       function slideIn(el) {
         var top_of_element = el.offset().top;
@@ -219,23 +232,64 @@
         }
       }
 
+      var about_visible = false;
+      var skills_visible = false;
+
       $(window).scroll(() => slideIn($('#first-tile')));
       $(window).scroll(() => slideIn($('#second-tile')));
       $(window).scroll(() => slideIn($('#third-tile')));
 
-      about_h1.addEventListener('click', () =>
-        about_p1.classList.toggle('inscope')
-      );
+      about_h1.addEventListener('click', () => {
+        if (about_visible) {
+          about_visible = false;
+          ab1.classList.remove('disabled');
+          about_p1.classList.remove('inscope');
+          skills.classList.remove('move-down');
+        } else {
+          about_visible = true;
+          ab1.classList.add('disabled');
+          about_p1.classList.add('inscope');
+          skills.classList.add('move-down');
+        }
+      });
 
       skills_h2.addEventListener('click', () => {
-        skills_h3.classList.toggle('inscope');
-        skills_list.classList.toggle('inscope');
+        if (skills_visible) {
+          skills_visible = false;
+          ab2.classList.remove('disabled');
+          skills_h3.classList.remove('inscope');
+          skills_list.classList.remove('inscope');
+          setTimeout(function() {
+            skills_h3.classList.add('disabled');
+            skills_list.classList.add('disabled');
+          }, 1000);
+        } else {
+          skills_visible = true;
+          ab2.classList.add('disabled');
+          skills_h3.classList.remove('disabled');
+          skills_list.classList.remove('disabled');
+          setTimeout(function() {
+            skills_h3.classList.add('inscope');
+            skills_list.classList.add('inscope');
+          }, 500);
+        }
       });
 
       about_btn.addEventListener('click', () => {
+        ab1.classList.add('disabled');
+        ab2.classList.add('disabled');
+        skills.classList.add('move-down');
         about_p1.classList.add('inscope');
-        skills_h3.classList.add('inscope');
-        skills_list.classList.add('inscope');
+
+        if (!skills_visible) {
+          skills_visible = true;
+          skills_h3.classList.remove('disabled');
+          skills_list.classList.remove('disabled');
+          setTimeout(function() {
+            skills_h3.classList.add('inscope');
+            skills_list.classList.add('inscope');
+          }, 100);
+        }
       });
     </script>
   </body>

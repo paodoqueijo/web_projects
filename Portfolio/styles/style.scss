@@ -46,7 +46,6 @@ nav {
   padding: 50px 10% 50px 10%;
   min-height: 1150px;
   background: linear-gradient(45deg, teal, rgb(0, 72, 72));
-  overflow-x: hidden;
   .about-text {
     position: absolute;
     top: 0;
@@ -97,10 +96,10 @@ nav {
     width: 50%;
     padding-top: 100px;
     margin-bottom: 500px;
-    overflow-x: hidden;
     h2 {
       display: inline;
       position: relative;
+      top: 0;
     }
     h2::after {
       position: absolute;
@@ -163,6 +162,7 @@ nav {
   .about-text p.inscope,
   .skills ul.inscope,
   .skills h3.inscope {
+    display: inherit;
     transform: translateX(0);
     transform-origin: left;
   }
@@ -323,6 +323,7 @@ h2 {
 
 .disabled {
   display: none;
+  visibility: hidden;
 }
 
 #contact-section {
@@ -377,13 +378,95 @@ footer {
     margin-bottom: 15px;
   }
 
+  .arrow-bdy,
+  .arrow-bdy-two {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    animation-name: jump;
+    animation-duration: 4s;
+    animation-delay: 1.3s;
+    animation-iteration-count: infinite;
+  }
+
+  .arrow-bdy-two {
+    top: -12px;
+    animation-delay: 1.4s;
+  }
+
+  .arrow {
+    /*    content: '';*/
+    position: relative;
+  }
+
+  .arrow::before,
+  .arrow::after {
+    position: absolute;
+    content: '';
+    background-color: $mywhite;
+    width: 25px;
+    height: 6px;
+  }
+
+  .arrow::before {
+    top: 32px;
+    left: 16px;
+    transform: rotate(45deg);
+  }
+
+  .arrow::after {
+    top: 32px;
+    left: 30px;
+    transform: rotate(-45deg);
+  }
+
   #welcome-section {
     height: auto;
+    min-height: 100vh;
+
     .skills,
     .about-text {
       margin: auto;
       position: unset;
       width: 100%;
+      padding-top: 20px;
     }
+
+    .skills {
+      transform: translateY(-270px);
+      transition: transform 0.4s 0.15s;
+    }
+
+    .move-down {
+      transform: translateY(0);
+      transition: transform 0.3s 0s;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  13% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  38% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  63% {
+    opacity: 0;
+    transform: translateY(5px);
   }
 }

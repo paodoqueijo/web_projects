@@ -50,7 +50,6 @@ nav a:hover {
   padding: 50px 10% 50px 10%;
   min-height: 1150px;
   background: linear-gradient(45deg, teal, #004848);
-  overflow-x: hidden;
 }
 
 #welcome-section .about-text {
@@ -114,12 +113,12 @@ nav a:hover {
   width: 50%;
   padding-top: 100px;
   margin-bottom: 500px;
-  overflow-x: hidden;
 }
 
 #welcome-section .skills h2 {
   display: inline;
   position: relative;
+  top: 0;
 }
 
 #welcome-section .skills h2::after {
@@ -199,6 +198,7 @@ nav a:hover {
 #welcome-section .about-text p.inscope,
 #welcome-section .skills ul.inscope,
 #welcome-section .skills h3.inscope {
+  display: inherit;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transform-origin: left;
@@ -384,6 +384,7 @@ h2 {
 
 .disabled {
   display: none;
+  visibility: hidden;
 }
 
 #contact-section {
@@ -448,14 +449,141 @@ footer a {
     display: block;
     margin-bottom: 15px;
   }
+  .arrow-bdy,
+  .arrow-bdy-two {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    -webkit-animation-name: jump;
+            animation-name: jump;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .arrow-bdy-two {
+    top: -12px;
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s;
+  }
+  .arrow {
+    /*    content: '';*/
+    position: relative;
+  }
+  .arrow::before,
+  .arrow::after {
+    position: absolute;
+    content: '';
+    background-color: #ebe8e6;
+    width: 25px;
+    height: 6px;
+  }
+  .arrow::before {
+    top: 32px;
+    left: 16px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .arrow::after {
+    top: 32px;
+    left: 30px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
   #welcome-section {
     height: auto;
+    min-height: 100vh;
   }
   #welcome-section .skills,
   #welcome-section .about-text {
     margin: auto;
     position: unset;
     width: 100%;
+    padding-top: 20px;
+  }
+  #welcome-section .skills {
+    -webkit-transform: translateY(-270px);
+            transform: translateY(-270px);
+    -webkit-transition: -webkit-transform 0.4s 0.15s;
+    transition: -webkit-transform 0.4s 0.15s;
+    transition: transform 0.4s 0.15s;
+    transition: transform 0.4s 0.15s, -webkit-transform 0.4s 0.15s;
+  }
+  #welcome-section .move-down {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s 0s;
+    transition: -webkit-transform 0.3s 0s;
+    transition: transform 0.3s 0s;
+    transition: transform 0.3s 0s, -webkit-transform 0.3s 0s;
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  13% {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  38% {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  63% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  13% {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  38% {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  63% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
 }
 /*# sourceMappingURL=style.css.map */
