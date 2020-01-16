@@ -1,4 +1,8 @@
 /** @format */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::after {
   -webkit-box-sizing: border-box;
@@ -12,6 +16,7 @@ body {
   max-width: 1500px;
   margin: auto;
   background-color: #ebe8e6;
+  position: relative;
 }
 
 nav {
@@ -41,8 +46,8 @@ nav a:hover {
 
 #welcome-section {
   color: #ebe8e6;
-  padding: 100px 10% 50px 10%;
-  min-height: 940px;
+  padding: 50px 10% 50px 10%;
+  min-height: 1150px;
   background: linear-gradient(45deg, teal, #004848);
 }
 
@@ -102,9 +107,8 @@ nav a:hover {
 
 #welcome-section .skills {
   position: absolute;
-  top: 400px;
-  right: 0;
-  margin-left: 60%;
+  top: 500px;
+  right: -20px;
   width: 50%;
   padding-top: 100px;
   margin-bottom: 500px;
@@ -185,6 +189,10 @@ nav a:hover {
   transition: 0.6s 0.25s;
 }
 
+#welcome-section .skills ul li {
+  padding-bottom: 6px;
+}
+
 #welcome-section .about-text p.inscope,
 #welcome-section .skills ul.inscope,
 #welcome-section .skills h3.inscope {
@@ -200,6 +208,57 @@ h2 {
   font-weight: bolder;
   padding: 0;
   margin: 0;
+}
+
+#c-icon {
+  width: 24px;
+  position: relative;
+  top: 3px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+#matlab-icon {
+  width: 23px;
+  -webkit-filter: grayscale(100%) brightness(150%);
+          filter: grayscale(100%) brightness(150%);
+}
+
+#pd-icon {
+  width: 23px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#reaper-icon {
+  width: 21px;
+  -webkit-filter: grayscale(100%) brightness(100%);
+          filter: grayscale(100%) brightness(100%);
+  position: relative;
+  top: 2px;
+}
+
+#affinity-icon {
+  position: relative;
+  top: 3px;
+  width: 23px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#abl-icon {
+  width: 28px;
+  height: 14px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+#jquery-icon {
+  width: 25px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  position: relative;
+  bottom: -5px;
 }
 
 #projects {
@@ -252,15 +311,22 @@ h2 {
 }
 
 .project-tile {
+  opacity: 0;
   position: relative;
   content: '';
   width: 420px;
   height: 520px;
-  background-color: #ebe8e6;
+  background-color: #f3f3f3;
   -webkit-box-shadow: 0 0 10px 4px grey;
           box-shadow: 0 0 10px 4px grey;
   border-radius: 2px;
   margin: 35px 20px;
+  -webkit-transform: translateX(-1500px);
+          transform: translateX(-1500px);
+  -webkit-transition: opacity ease-out 2s 0.3s, -webkit-transform 0.9s 0.1s;
+  transition: opacity ease-out 2s 0.3s, -webkit-transform 0.9s 0.1s;
+  transition: transform 0.9s 0.1s, opacity ease-out 2s 0.3s;
+  transition: transform 0.9s 0.1s, opacity ease-out 2s 0.3s, -webkit-transform 0.9s 0.1s;
 }
 
 .project-tile img {
@@ -295,6 +361,23 @@ h2 {
   background-color: #004848;
 }
 
+#second-tile {
+  -webkit-transform: translateX(1500px);
+          transform: translateX(1500px);
+}
+
+#second-tile.inview {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.inview {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .disabled {
   display: none;
 }
@@ -304,12 +387,17 @@ h2 {
   height: auto;
   background: linear-gradient(45deg, #465e5d, #334646);
   color: #ebe8e6;
-  padding-top: 30px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #contact-section h2,
 #contact-section h3 {
   text-align: center;
+}
+
+#contact-section h3 {
+  font-size: 160%;
 }
 
 #contact-section .contact-links {
@@ -331,17 +419,24 @@ footer {
   height: 45px;
   background-color: #798181;
   color: #ebe8e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-footer span {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
-footer #span2 {
-  left: unset;
-  right: 10px;
+footer a {
+  color: white;
 }
 
 @media (max-width: 900px) {

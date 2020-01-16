@@ -13,28 +13,37 @@
       rel="stylesheet"
     />
     <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/b31d65692e.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
     <nav id="navbar">
-      <a href="#welcome-section">About</a>
+      <a id="about-btn" href="#welcome-section">About</a>
       <a href="#projects">Work</a>
       <a class="disabled" href="#services">Services</a>
       <a class="disabled" href="#pricing">Pricing</a>
       <a href="#contact-section">Contact</a>
       <a class="disabled" href="#also">I also do this</a>
     </nav>
+
     <section id="welcome-section">
       <div class="block">
         <div class="about-text">
           <h1 id="about-h1">Hey, I am Michael Sattler!</h1>
           <p id="about-p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-            labore, laboriosam corrupti fugit quos, similique doloribus ut
-            veritatis eligendi nulla sit ducimus eos hic ipsa magnam, aliquid in
-            assumenda. Officia.
+            Born in 1996 near Vienna, Austria and still trying to figure all of
+            this out. Currently I am very interested in web development
+            allthough my former education was more about electrical engineering,
+            acoustics and audio. I am also very much into music.<br />
+            So anyways, thanks for visiting my page. Feel free to take a look at
+            my projects but take them with a grain of salt. Most of them are
+            fake websites I made to gain some experience.
           </p>
         </div>
       </div>
@@ -43,17 +52,59 @@
           <h2 id="skills-h2">I am a Developer</h2>
           <h3 id="skills-h3">These are some technologies I am using:</h3>
           <ul id="skills-list">
-            <li>C/C++</li>
-            <li>Python</li>
-            <li>MATLAB</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Sass</li>
-            <li>JavaScript</li>
-            <li>Affintiy Designer</li>
-            <li>Reaper</li>
-            <li>Ableton Live</li>
-            <li>Pure Data</li>
+            <li>
+              <img
+                id="c-icon"
+                src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"
+                alt="c-icon"
+              />
+              C/C++
+            </li>
+            <li><i class="fab fa-python"></i> Python</li>
+            <li>
+              <img
+                id="matlab-icon"
+                alt="matlab-log"
+                src="./img/Matlab_Logo.png"
+              />
+              MATLAB
+            </li>
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li><i class="fab fa-sass"></i> Sass</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li>
+              <img
+                id="jquery-icon"
+                alt="jquery icon"
+                src="./img/jquery-icon.png"
+              />
+              jQuery
+            </li>
+            <li>
+              <img
+                id="affinity-icon"
+                alt="affinity icon"
+                src="./img/Affinity_Designer_logo_new.png"
+              />
+              Affintiy Designer
+            </li>
+            <li>
+              <img
+                id="reaper-icon"
+                alt="reaper icon"
+                src="./img/reaper-icon.png"
+              />
+              Reaper
+            </li>
+            <li>
+              <img id="abl-icon" alt="ableton icon" src="./img/abl-logo.png" />
+              Ableton Live
+            </li>
+            <li>
+              <img id="pd-icon" alt="pd icon" src="./img/pd-logo.png" /> Pure
+              Data
+            </li>
           </ul>
         </div>
       </div>
@@ -63,7 +114,7 @@
       <h2>These are some of my projects!</h2>
 
       <div id="tiles">
-        <div class="project-tile">
+        <div id="first-tile" class="project-tile">
           <a
             href="https://paodoqueijo.github.io/web_projects/Ordination_Sattler/home.html"
             target="_blank"
@@ -73,39 +124,44 @@
               src="img/preview_ordination.gif"
               alt="preview ordinationswebsite"
             />
-            <h3>Ordinationswebsite</h3>
+            <h3>Doctor's website</h3>
           </a>
         </div>
 
-        <div class="project-tile">
+        <div id="second-tile" class="project-tile">
           <a
             href="https://paodoqueijo.github.io/web_projects/product landing page/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="img/preview_webshop.gif" alt="preview webshop" />
-            <h3 style="margin-top: 83px;">Fake Webshop</h3>
+            <h3 style="margin-top: 83px;">Fake webshop</h3>
           </a>
         </div>
 
-        <div class="project-tile">
+        <div id="third-tile" class="project-tile">
           <a
             href="https://paodoqueijo.github.io/web_projects/survey_form/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="img/preview_survey.png" alt="preview Umfrage" />
-            <h3>Umfrageformular</h3>
+            <h3>Survey page</h3>
           </a>
         </div>
       </div>
 
-      <a href="">View All</a>
+      <a
+        href="https://github.com/paodoqueijo/web_projects"
+        target="_blank"
+        rel="noopener noreferrer"
+        >View All</a
+      >
     </section>
 
     <section id="contact-section">
       <h2>Want to know more?</h2>
-      <h3>Contact me!</h3>
+      <h3>Let's get in touch!</h3>
       <div class="contact-links">
         <a
           href="https://www.facebook.com/michael.sattler.3958"
@@ -125,8 +181,14 @@
         >
       </div>
     </section>
+
     <footer>
       <span>Created by Michael Sattler</span>
+      <span
+        ><a href="https://icons8.com/icon/55199/c++"
+          >C++ icon by Icons8</a
+        ></span
+      >
       <span id="span2">&copy 2020</span>
     </footer>
 
@@ -136,6 +198,30 @@
       var skills_h2 = document.getElementById('skills-h2');
       var skills_h3 = document.getElementById('skills-h3');
       var skills_list = document.getElementById('skills-list');
+      var about_btn = document.getElementById('about-btn');
+      var welcome_sct = document.getElementById('welcome-section');
+
+      function slideIn(el) {
+        var top_of_element = el.offset().top;
+        var bottom_of_element = el.offset().top + el.outerHeight();
+        var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+        var top_of_screen = $(window).scrollTop();
+
+        if (
+          bottom_of_screen > top_of_element &&
+          top_of_screen < bottom_of_element
+        ) {
+          console.log(el);
+
+          el.addClass('inview');
+        } else {
+          el.removeClass('inview');
+        }
+      }
+
+      $(window).scroll(() => slideIn($('#first-tile')));
+      $(window).scroll(() => slideIn($('#second-tile')));
+      $(window).scroll(() => slideIn($('#third-tile')));
 
       about_h1.addEventListener('click', () =>
         about_p1.classList.toggle('inscope')
@@ -144,6 +230,12 @@
       skills_h2.addEventListener('click', () => {
         skills_h3.classList.toggle('inscope');
         skills_list.classList.toggle('inscope');
+      });
+
+      about_btn.addEventListener('click', () => {
+        about_p1.classList.add('inscope');
+        skills_h3.classList.add('inscope');
+        skills_list.classList.add('inscope');
       });
     </script>
   </body>
