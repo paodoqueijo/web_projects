@@ -17,6 +17,7 @@ body {
   margin: auto;
   background-color: rgb(235, 232, 230);
   position: relative;
+  overflow-x: hidden;
 }
 
 nav {
@@ -45,7 +46,7 @@ nav {
   padding: 50px 10% 50px 10%;
   min-height: 1150px;
   background: linear-gradient(45deg, teal, rgb(0, 72, 72));
-
+  overflow-x: hidden;
   .about-text {
     position: absolute;
     top: 0;
@@ -96,6 +97,7 @@ nav {
     width: 50%;
     padding-top: 100px;
     margin-bottom: 500px;
+    overflow-x: hidden;
     h2 {
       display: inline;
       position: relative;
@@ -223,6 +225,7 @@ h2 {
   width: 100%;
   height: auto;
   padding-top: 30px;
+  overflow-x: hidden;
   h2 {
     text-align: center;
     padding: 50px 0;
