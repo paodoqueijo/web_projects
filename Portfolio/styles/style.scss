@@ -188,18 +188,6 @@ h2 {
   filter: grayscale(100%) brightness(150%);
 }
 
-#pd-icon {
-  width: 23px;
-  filter: grayscale(100%);
-}
-
-#reaper-icon {
-  width: 21px;
-  filter: grayscale(100%) brightness(100%);
-  position: relative;
-  top: 2px;
-}
-
 #affinity-icon {
   position: relative;
   top: 3px;
@@ -211,13 +199,6 @@ h2 {
   width: 28px;
   height: 14px;
   filter: invert(100%);
-}
-
-#jquery-icon {
-  width: 25px;
-  filter: invert(100%);
-  position: relative;
-  bottom: -5px;
 }
 
 #projects {

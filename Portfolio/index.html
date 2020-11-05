@@ -2,295 +2,155 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Hey, I am Michael!</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.js"
-      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/b31d65692e.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <nav id="navbar">
-      <a id="about-btn" href="#welcome-section">About</a>
-      <a href="#projects">Work</a>
-      <a class="disabled" href="#services">Services</a>
-      <a class="disabled" href="#pricing">Pricing</a>
-      <a href="#contact-section">Contact</a>
-      <a class="disabled" href="#also">I also do this</a>
-    </nav>
 
-    <section id="welcome-section">
-      <div class="block">
-        <div class="about-text">
-          <h1 id="about-h1">
-            Hey, I am Michael Sattler!
-            <span id="ab1" class="arrow-bdy"><span class="arrow"></span></span>
-          </h1>
-          <p id="about-p">
-            Born in 1996 near Vienna, Austria and still trying to figure all of
-            this out. Currently I am very interested in web development
-            allthough my former education was more about electrical engineering,
-            acoustics and audio. I am also very much into music.<br />
-            So anyways, thanks for visiting my page. Feel free to take a look at
-            my projects but take them with a grain of salt. Most of them are
-            fake websites I made to gain some experience.
-          </p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Michael Sattler, Software Engineering</title>
+  <meta name="description"
+    content="Michael Sattler Software Engineering Portfolio">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+    rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b31d65692e.js"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav id="navbar">
+    <a id="about-btn" href="#welcome-section">About</a>
+    <a href="#projects">Work</a>
+    <a class="disabled" href="#services">Services</a>
+    <a class="disabled" href="#pricing">Pricing</a>
+    <a href="#contact-section">Contact</a>
+    <a class="disabled" href="#also">I also do this</a>
+  </nav>
+
+  <section id="welcome-section">
+    <div class="block">
+      <div class="about-text">
+        <h1 id="about-h1">
+          Hey, I am Michael!
+          <span id="ab1" class="arrow-bdy"><span class="arrow"></span></span>
+        </h1>
+        <p id="about-p">
+          I am a <span id="age"></span> year old engineer currently doing my
+          master's degree in Artificial
+          Intelligence. My interests lie especially in software and web
+          development, ecology and future technologies. I also spend quite some
+          time creating music. On this webpage I want to display some projects I
+          made in my spare time.
+        </p>
       </div>
-      <div class="block">
-        <div id="skills" class="skills">
-          <h2 id="skills-h2">
-            I am a Developer
-            <span id="ab2" class="arrow-bdy-two"
-              ><span class="arrow"></span
-            ></span>
-          </h2>
-          <h3 class="disabled" id="skills-h3">
-            These are some technologies I am using:
-          </h3>
-          <ul class="disabled" id="skills-list">
-            <li>
-              <img
-                id="c-icon"
-                src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"
-                alt="c-icon"
-              />
-              C/C++
-            </li>
-            <li><i class="fab fa-python"></i> Python</li>
-            <li>
-              <img
-                id="matlab-icon"
-                alt="matlab-log"
-                src="./img/Matlab_Logo.png"
-              />
-              MATLAB
-            </li>
-            <li><i class="fab fa-html5"></i> HTML5</li>
-            <li><i class="fab fa-css3-alt"></i> CSS3</li>
-            <li><i class="fab fa-sass"></i> Sass</li>
-            <li><i class="fab fa-js"></i> JavaScript</li>
-            <li>
-              <img
-                id="jquery-icon"
-                alt="jquery icon"
-                src="./img/jquery-icon.png"
-              />
-              jQuery
-            </li>
-            <li>
-              <img
-                id="affinity-icon"
-                alt="affinity icon"
-                src="./img/Affinity_Designer_logo_new.png"
-              />
-              Affintiy Designer
-            </li>
-            <li>
-              <img
-                id="reaper-icon"
-                alt="reaper icon"
-                src="./img/reaper-icon.png"
-              />
-              Reaper
-            </li>
-            <li>
-              <img id="abl-icon" alt="ableton icon" src="./img/abl-logo.png" />
-              Ableton Live
-            </li>
-            <li>
-              <img id="pd-icon" alt="pd icon" src="./img/pd-logo.png" /> Pure
-              Data
-            </li>
-          </ul>
-        </div>
+    </div>
+    <div class="block">
+      <div id="skills" class="skills">
+        <h2 id="skills-h2">
+          I am a Developer
+          <span id="ab2" class="arrow-bdy-two"><span
+              class="arrow"></span></span>
+        </h2>
+        <h3 class="disabled" id="skills-h3">
+          These are some technologies I use:
+        </h3>
+        <ul class="disabled" id="skills-list">
+          <li>
+            <img id="c-icon"
+              src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"
+              alt="c-icon" />
+            C/C++
+          </li>
+          <li><i class="fab fa-python"></i> Python</li>
+          <li>
+            <img id="matlab-icon" alt="matlab-log"
+              src="./img/Matlab_Logo.png" />
+            MATLAB
+          </li>
+          <li><i class="fab fa-html5"></i> HTML5</li>
+          <li><i class="fab fa-css3-alt"></i> CSS3/Sass</li>
+
+          <li><i class="fab fa-js"></i> JavaScript/TypeScript</li>
+          <li><i class="fab fa-react"></i> React.js</li>
+          <li><i class="fab fa-vuejs"></i> Vue.js</li>
+          <li><i class="fab fa-node-js"></i> Node.js</li>
+          <li><i class="fab fa-git-alt"></i> git</li>
+          <li>
+            <img id="affinity-icon" alt="affinity icon"
+              src="./img/Affinity_Designer_logo_new.png" />
+            Affintiy Designer
+          </li>
+          <li>
+            <img id="abl-icon" alt="ableton icon" src="./img/abl-logo.png" />
+            Ableton Live
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2>These are some of my projects!</h2>
+  <section id="projects">
+    <h2>These are some of my projects!</h2>
 
-      <div id="tiles">
-        <div id="first-tile" class="project-tile">
-          <a
-            href="https://paodoqueijo.github.io/web_projects/Ordination_Sattler/home.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="img/preview_ordination.gif"
-              alt="preview ordinationswebsite"
-            />
-            <h3>Doctor's website</h3>
-          </a>
-        </div>
-
-        <div id="second-tile" class="project-tile">
-          <a
-            href="https://paodoqueijo.github.io/web_projects/product landing page/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="img/preview_webshop.gif" alt="preview webshop" />
-            <h3 style="margin-top: 83px;">Webshop</h3>
-          </a>
-        </div>
-
-        <div id="third-tile" class="project-tile">
-          <a
-            href="https://paodoqueijo.github.io/web_projects/survey_form/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="img/preview_survey.png" alt="preview Umfrage" />
-            <h3>Survey page</h3>
-          </a>
-        </div>
+    <div id="tiles">
+      <div id="first-tile" class="project-tile">
+        <a href="https://paodoqueijo.github.io/web_projects/Ordination_Sattler/home.html"
+          target="_blank" rel="noopener noreferrer">
+          <img src="img/preview_ordination.gif"
+            alt="preview ordinationswebsite" />
+          <h3>Doctor's website</h3>
+        </a>
       </div>
 
-      <a
-        href="https://github.com/paodoqueijo/web_projects"
-        target="_blank"
-        rel="noopener noreferrer"
-        >View All</a
-      >
-    </section>
-
-    <section id="contact-section">
-      <h2>Want to know more?</h2>
-      <h3>Let's get in touch!</h3>
-      <div class="contact-links">
-        <a
-          href="https://www.facebook.com/michael.sattler.3958"
-          target="_blank"
-          class="btn contact-details"
-          ><i class="fab fa-facebook-square"></i> Facebook</a
-        >
-        <a
-          id="profile-link"
-          href="https://github.com/paodoqueijo"
-          target="_blank"
-          class="btn contact-details"
-          ><i class="fab fa-github"></i> GitHub</a
-        >
-        <a href="mailto:sattlermichi@gmail.com" class="btn contact-details"
-          ><i class="fas fa-at"></i> Send a mail</a
-        >
+      <div id="second-tile" class="project-tile">
+        <a href="https://paodoqueijo.github.io/web_projects/product landing page/"
+          target="_blank" rel="noopener noreferrer">
+          <img src="img/preview_webshop.gif" alt="preview webshop" />
+          <h3 style="margin-top: 83px;">Webshop</h3>
+        </a>
       </div>
-    </section>
 
-    <footer>
-      <span>Created by Michael Sattler</span>
-      <span
-        ><a href="https://icons8.com/icon/55199/c++"
-          >C++ icon by Icons8</a
-        ></span
-      >
-      <span id="span2">&copy 2020</span>
-    </footer>
+      <div id="third-tile" class="project-tile">
+        <a href="https://paodoqueijo.github.io/web_projects/survey_form/"
+          target="_blank" rel="noopener noreferrer">
+          <img src="img/preview_survey.png" alt="preview Umfrage" />
+          <h3>Survey page</h3>
+        </a>
+      </div>
+    </div>
 
-    <script>
-      var about_h1 = document.getElementById('about-h1');
-      var about_p1 = document.getElementById('about-p');
-      var skills_h2 = document.getElementById('skills-h2');
-      var skills_h3 = document.getElementById('skills-h3');
-      var skills_list = document.getElementById('skills-list');
-      var about_btn = document.getElementById('about-btn');
-      var welcome_sct = document.getElementById('welcome-section');
-      var skills = document.getElementById('skills');
-      var ab1 = document.getElementById('ab1');
-      var ab2 = document.getElementById('ab2');
+    <a href="https://github.com/paodoqueijo/web_projects" target="_blank"
+      rel="noopener noreferrer">View All</a>
+  </section>
 
-      function slideIn(el) {
-        var top_of_element = el.offset().top;
-        var bottom_of_element = el.offset().top + el.outerHeight();
-        var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-        var top_of_screen = $(window).scrollTop();
+  <section id="contact-section">
+    <h2>Want to know more?</h2>
+    <h3>Let's get in touch!</h3>
+    <div class="contact-links">
+      <a href="www.linkedin.com/in/
+      michael-sattler
+      " target="_blank" class="btn contact-details"><i
+          class="fab fa-linkedin"></i>
+        LinkedIn</a>
+      <a id="profile-link" href="https://github.com/paodoqueijo" target="_blank"
+        class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:sattlermichi@gmail.com" class="btn contact-details"><i
+          class="fas fa-at"></i> Send a mail</a>
+    </div>
+  </section>
 
-        if (
-          bottom_of_screen > top_of_element &&
-          top_of_screen < bottom_of_element
-        ) {
-          console.log(el);
+  <footer>
+    <span>Created by Michael Sattler</span>
+    <span><a href="https://icons8.com/icon/55199/c++">C++ icon by
+        Icons8</a></span>
+    <span id="span2">&copy 2020</span>
+  </footer>
 
-          el.addClass('inview');
-        } else {
-          el.removeClass('inview');
-        }
-      }
+  <script type="text/javascript" src="index.js"></script>
 
-      var about_visible = false;
-      var skills_visible = false;
+</body>
 
-      $(window).scroll(() => slideIn($('#first-tile')));
-      $(window).scroll(() => slideIn($('#second-tile')));
-      $(window).scroll(() => slideIn($('#third-tile')));
-
-      about_h1.addEventListener('click', () => {
-        if (about_visible) {
-          about_visible = false;
-          ab1.classList.remove('disabled');
-          about_p1.classList.remove('inscope');
-          skills.classList.remove('move-down');
-        } else {
-          about_visible = true;
-          ab1.classList.add('disabled');
-          about_p1.classList.add('inscope');
-          skills.classList.add('move-down');
-        }
-      });
-
-      skills_h2.addEventListener('click', () => {
-        if (skills_visible) {
-          skills_visible = false;
-          ab2.classList.remove('disabled');
-          skills_h3.classList.remove('inscope');
-          skills_list.classList.remove('inscope');
-          setTimeout(function() {
-            skills_h3.classList.add('disabled');
-            skills_list.classList.add('disabled');
-          }, 1000);
-        } else {
-          skills_visible = true;
-          ab2.classList.add('disabled');
-          skills_h3.classList.remove('disabled');
-          skills_list.classList.remove('disabled');
-          setTimeout(function() {
-            skills_h3.classList.add('inscope');
-            skills_list.classList.add('inscope');
-          }, 500);
-        }
-      });
-
-      about_btn.addEventListener('click', () => {
-        ab1.classList.add('disabled');
-        ab2.classList.add('disabled');
-        skills.classList.add('move-down');
-        about_p1.classList.add('inscope');
-
-        if (!skills_visible) {
-          skills_visible = true;
-          skills_h3.classList.remove('disabled');
-          skills_list.classList.remove('disabled');
-          setTimeout(function() {
-            skills_h3.classList.add('inscope');
-            skills_list.classList.add('inscope');
-          }, 100);
-        }
-      });
-    </script>
-  </body>
 </html>
